@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="1200">
+  <!-- Background -->
+  <rect x="0" y="0" width="1700" height="1200" fill="#f8fafc"/>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#111827" />
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#1d4ed8" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="60" y="80" font-family="Inter,Segoe UI,Arial,Helvetica,sans-serif" font-size="28" font-weight="700" fill="#111827">
+    KGG-12h MVP — Verification Flow (Clean)
+  </text>
+
+  <!-- Column labels -->
+  <text x="60" y="130" font-family="Inter,Segoe UI,Arial,Helvetica,sans-serif" font-size="18" font-weight="700" fill="#111827">Main Pipeline</text>
+  <text x="980" y="130" font-family="Inter,Segoe UI,Arial,Helvetica,sans-serif" font-size="18" font-weight="700" fill="#1d4ed8">Context Engine &amp; Observability</text>
+
+  <!-- Columns containers -->
+  <rect x="50"  y="150" width="820" height="980" rx="14" ry="14" fill="#ffffff" stroke="#e5e7eb"/>
+  <rect x="960" y="150" width="680" height="980" rx="14" ry="14" fill="#ffffff" stroke="#e5e7eb"/>
+
+  <!-- Main pipeline cards -->
+  <!-- Row 1 -->
+  <rect x="80" y="190" width="240" height="90" rx="12" ry="12" fill="#ffffff" stroke="#e5e7eb"/>
+  <text x="100" y="220" font-family="Inter,Segoe UI,Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#111827">0. LLM Output Interceptor</text>
+  <text x="100" y="245" font-family="Inter,Segoe UI,Arial,Helvetica,sans-serif" font-size="14" fill="#111827">Capture model answer</text>
+
+  <rect x="350" y="190" width="240" height="90" rx="12" ry="12" fill="#ffffff" stroke="#e5e7eb"/>
+  <text x="370" y="220" font-family="Inter,Segoe UI,Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#111827">1. Grounding Gateway</text>
+  <text x="370" y="245" font-family="Inter,Segoe UI,Arial,Helvetica,sans-serif" font-size="14" fill="#111827">allowlist · evidence gate</text>
+
+  <rect x="620" y="190" width="220" height="90" rx="12" ry="12" fill="#ffffff" stroke="#e5e7eb"/>
+  <text x="640" y="220" font-family="Inter,Segoe UI,Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#111827">2. Attribution-First</text>
+  <text x="640" y="245" font-family="Inter,Segoe UI,Arial,Helvetica,sans-serif" font-size="14" fill="#111827">low-temp factual spans</text>
+
+  <!-- Row 2 -->
+  <rect x="80" y="320" width="300" height="110" rx="12" ry="12" fill="#ffffff" stroke="#e5e7eb"/>
+  <text x="100" y="350" font-family="Inter,Segoe UI,Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#111827">3. Claim Decomposer</text>
+  <text x="100" y="375" font-family="Inter,Segoe UI,Arial,Helvetica,sans-serif" font-size="14" fill="#111827">entity · numeric · temporal</text>
+
+  <rect x="410" y="320" width="260" height="150" rx="12" ry="12" fill="#ffffff" stroke="#e5e7eb"/>
+  <text x="430" y="350" font-family="Inter,Segoe UI,Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#111827">4. Verifier Mesh</text>
+  <text x="430" y="375" font-family="Inter,Segoe UI,Arial,Helvetica,sans-serif" font-size="14" fill="#111827">NLI · Numeric/Unit · Temporal</text>
+  <text x="430" y="395" font-family="Inter,Segoe UI,Arial,Helvetica,sans-serif" font-size="14" fill="#111827">AIS/Citation · Consistency</text>
+
+  <rect x="700" y="320" width="140" height="90" rx="12" ry="12" fill="#ffffff" stroke="#e5e7eb"/>
+  <text x="720" y="350" font-family="Inter,Segoe UI,Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#111827">5. CoVe</text>
+  <text x="720" y="375" font-family="Inter,Segoe UI,Arial,Helvetica,sans-serif" font-size="14" fill="#111827">(optional)</text>
+
+  <!-- Row 3 -->
+  <rect x="80" y="500" width="280" height="100" rx="12" ry="12" fill="#ffffff" stroke="#e5e7eb"/>
+  <text x="100" y="530" font-family="Inter,Segoe UI,Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#111827">6. Confidence Composer</text>
+  <text x="100" y="555" font-family="Inter,Segoe UI,Arial,Helvetica,sans-serif" font-size="14" fill="#111827">isotonic calibration</text>
+
+  <rect x="390" y="500" width="280" height="100" rx="12" ry="12" fill="#ffffff" stroke="#e5e7eb"/>
+  <text x="410" y="530" font-family="Inter,Segoe UI,Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#111827">7. Output Rebuilder</text>
+  <text x="410" y="555" font-family="Inter,Segoe UI,Arial,Helvetica,sans-serif" font-size="14" fill="#111827">cards · thresholds · JSON</text>
+
+  <rect x="700" y="500" width="140" height="100" rx="12" ry="12" fill="#ffffff" stroke="#e5e7eb"/>
+  <text x="720" y="530" font-family="Inter,Segoe UI,Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#111827">Offline</text>
+  <text x="720" y="555" font-family="Inter,Segoe UI,Arial,Helvetica,sans-serif" font-size="14" fill="#111827">cache</text>
+
+  <!-- Arrows (pipeline) -->
+  <line x1="320" y1="235" x2="350" y2="235" stroke="#111827" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="590" y1="235" x2="620" y2="235" stroke="#111827" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="380" y1="375" x2="410" y2="375" stroke="#111827" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="670" y1="375" x2="700" y2="375" stroke="#111827" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="360" y1="550" x2="390" y2="550" stroke="#111827" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="670" y1="550" x2="700" y2="550" stroke="#111827" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Context Engine column (blue cards) -->
+  <rect x="990" y="190" width="620" height="120" rx="12" ry="12" fill="#eff6ff" stroke="#1d4ed8"/>
+  <text x="1010" y="220" font-family="Inter,Segoe UI,Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#1d4ed8">Context Engine</text>
+  <text x="1010" y="245" font-family="Inter,Segoe UI,Arial,Helvetica,sans-serif" font-size="14" fill="#111827">ST · EM · WN · PPM · CP API</text>
+
+  <rect x="990" y="340" width="290" height="110" rx="12" ry="12" fill="#eff6ff" stroke="#1d4ed8"/>
+  <text x="1010" y="370" font-family="Inter,Segoe UI,Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#1d4ed8">TW (Temporal Watcher)</text>
+  <text x="1010" y="395" font-family="Inter,Segoe UI,Arial,Helvetica,sans-serif" font-size="14" fill="#111827">staleness windows</text>
+
+  <rect x="1320" y="340" width="290" height="110" rx="12" ry="12" fill="#eff6ff" stroke="#1d4ed8"/>
+  <text x="1340" y="370" font-family="Inter,Segoe UI,Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#1d4ed8">CW (Contradiction Watcher)</text>
+  <text x="1340" y="395" font-family="Inter,Segoe UI,Arial,Helvetica,sans-serif" font-size="14" fill="#111827">mini-NLI vs ST/EM</text>
+
+  <rect x="990" y="480" width="620" height="110" rx="12" ry="12" fill="#eff6ff" stroke="#1d4ed8"/>
+  <text x="1010" y="510" font-family="Inter,Segoe UI,Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#1d4ed8">Observability &amp; Feedback</text>
+  <text x="1010" y="535" font-family="Inter,Segoe UI,Arial,Helvetica,sans-serif" font-size="14" fill="#111827">per-claim logs · ratings → audit queue</text>
+
+  <!-- Blue arrows feeding Mesh & Composer -->
+  <line x1="990" y1="395" x2="670" y2="395" stroke="#1d4ed8" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <line x1="1320" y1="395" x2="670" y2="565" stroke="#1d4ed8" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+  <!-- Footer notes -->
+  <rect x="80" y="640" width="780" height="150" rx="12" ry="12" fill="#ffffff" stroke="#e5e7eb"/>
+  <text x="100" y="670" font-family="Inter,Segoe UI,Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#111827">Latency Budget</text>
+  <text x="100" y="695" font-family="Inter,Segoe UI,Arial,Helvetica,sans-serif" font-size="14" fill="#111827">
+    Claim split ≤150ms · Retrieval ≤1.2s (≤2 sentences/claim; ≤12 total) · NLI ≤250ms/claim · End-to-end ≤2.5s
+  </text>
+
+  <rect x="80" y="820" width="780" height="150" rx="12" ry="12" fill="#ffffff" stroke="#e5e7eb"/>
+  <text x="100" y="850" font-family="Inter,Segoe UI,Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#111827">UI Output</text>
+  <text x="100" y="875" font-family="Inter,Segoe UI,Arial,Helvetica,sans-serif" font-size="14" fill="#111827">
+    Per-claim cards (✅/❌/⚪) · snippet highlights · calibrated probability · JSON export
+  </text>
+</svg>

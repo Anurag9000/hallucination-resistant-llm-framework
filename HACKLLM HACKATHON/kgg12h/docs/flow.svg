@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820">
+  <defs>
+    <style type="text/css"><![CDATA[
+      .title { font: bold 22px sans-serif; }
+      .lane  { font: bold 16px sans-serif; fill: #333; }
+      .box   { fill: #ffffff; stroke: #111111; stroke-width: 2; rx: 10; ry: 10; }
+      .boxBlue { fill: #eaf3ff; stroke: #2a5bd7; stroke-width: 2; rx: 10; ry: 10; }
+      .thin  { fill: #f9f9f9; stroke: #bbb; stroke-width: 1; rx: 8; ry: 8; }
+      .note  { font: 13px sans-serif; fill: #222; }
+      .label { font: 14px sans-serif; fill: #111; }
+      .small { font: 12px sans-serif; fill: #333; }
+      .arrow { stroke: #111; stroke-width: 2; marker-end: url(#arrowhead); fill: none; }
+      .arrowBlue { stroke: #2a5bd7; stroke-width: 2; marker-end: url(#arrowheadBlue); fill: none; }
+    ]]></style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#111" />
+    </marker>
+    <marker id="arrowheadBlue" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2a5bd7" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="20" y="40" class="title">KGG-12h MVP — Verification Flow</text>
+
+  <!-- Lanes -->
+  <rect x="10" y="60" width="880" height="730" class="thin"/>
+  <text x="20" y="80" class="lane">Main Pipeline</text>
+
+  <rect x="910" y="60" width="480" height="730" class="thin"/>
+  <text x="920" y="80" class="lane" fill="#2a5bd7">Context Engine & Observability</text>
+
+  <!-- Main pipeline boxes -->
+  <rect x="40"  y="110" width="220" height="70"  class="box"/>
+  <text x="50"  y="135" class="label">0. LLM Output Interceptor</text>
+  <text x="50"  y="155" class="small">Capture model answer</text>
+
+  <rect x="300" y="110" width="220" height="70"  class="box"/>
+  <text x="310" y="135" class="label">1. Grounding Gateway</text>
+  <text x="310" y="155" class="small">allowlist • evidence gate</text>
+
+  <rect x="560" y="110" width="260" height="70"  class="box"/>
+  <text x="570" y="135" class="label">2. Attribution-First Decoder</text>
+  <text x="570" y="155" class="small">low-temp factual spans</text>
+
+  <rect x="40"  y="220" width="260" height="80"  class="box"/>
+  <text x="50"  y="245" class="label">3. Claim Decomposer</text>
+  <text x="50"  y="265" class="small">atomic: entity • numeric • temporal</text>
+
+  <rect x="340" y="220" width="240" height="120" class="box"/>
+  <text x="350" y="245" class="label">4. Verifier Mesh</text>
+  <text x="350" y="265" class="small">NLI • Numeric/Unit • Temporal</text>
+  <text x="350" y="285" class="small">AIS/Citation • Consistency</text>
+
+  <rect x="620" y="220" width="200" height="70"  class="box"/>
+  <text x="630" y="245" class="label">5. CoVe Self-Audit (opt.)</text>
+
+  <rect x="40"  y="340" width="240" height="80"  class="box"/>
+  <text x="50"  y="365" class="label">6. Confidence Composer</text>
+  <text x="50"  y="385" class="small">isotonic calibration</text>
+
+  <rect x="310" y="360" width="280" height="80"  class="box"/>
+  <text x="320" y="385" class="label">7. Output Rebuilder</text>
+  <text x="320" y="405" class="small">cards • thresholds • JSON</text>
+
+  <!-- Offline cache -->
+  <rect x="620" y="360" width="200" height="80" class="box"/>
+  <text x="630" y="385" class="label">Offline Cache</text>
+  <text x="630" y="405" class="small">seed_kb.json • wiki pages</text>
+
+  <!-- Arrows main pipeline -->
+  <line x1="260" y1="145" x2="300" y2="145" class="arrow" />
+  <line x1="520" y1="145" x2="560" y2="145" class="arrow" />
+  <line x1="300" y1="255" x2="340" y2="255" class="arrow" />
+  <line x1="580" y1="255" x2="620" y2="255" class="arrow" />
+  <line x1="240" y1="260" x2="340" y2="260" class="arrow" />
+  <line x1="240" y1="380" x2="310" y2="400" class="arrow" />
+  <line x1="590" y1="400" x2="620" y2="400" class="arrow" />
+
+  <!-- Context Engine boxes (blue) -->
+  <rect x="940" y="110" width="430" height="110" class="boxBlue"/>
+  <text x="950" y="135" class="label">Context Engine</text>
+  <text x="950" y="155" class="small">ST • EM • WN • PPM</text>
+  <text x="950" y="175" class="small">CP API (Context Pack)</text>
+
+  <rect x="940" y="240" width="430" height="110" class="boxBlue"/>
+  <text x="950" y="265" class="label">TW (Temporal Watcher)</text>
+  <text x="950" y="285" class="small">staleness windows</text>
+
+  <rect x="940" y="370" width="430" height="110" class="boxBlue"/>
+  <text x="950" y="395" class="label">CW (Contradiction Watcher)</text>
+  <text x="950" y="415" class="small">mini-NLI against ST/EM</text>
+
+  <rect x="940" y="500" width="430" height="110" class="boxBlue"/>
+  <text x="950" y="525" class="label">Observability & Feedback</text>
+  <text x="950" y="545" class="small">per-claim logs • ratings → audit</text>
+
+  <!-- Blue arrows to mesh and composer -->
+  <line x1="940" y1="295" x2="580" y2="295" class="arrowBlue" />
+  <line x1="940" y1="425" x2="580" y2="425" class="arrowBlue" />
+  <text x="805" y="288" class="small">→ hard-gate into Verifier Mesh</text>
+  <text x="795" y="418" class="small">→ features into Confidence Composer</text>
+
+  <!-- Notes -->
+  <rect x="40" y="470" width="780" height="140" class="thin"/>
+  <text x="50" y="495" class="label">Latency Budget</text>
+  <text x="50" y="515" class="small">Claim split ≤150ms • Retrieval ≤1.2s (≤2 sentences/claim; ≤12 total) • NLI ≤250ms/claim • End-to-end ≤2.5s</text>
+  <text x="50" y="535" class="label">Non-Goals (12h)</text>
+  <text x="50" y="555" class="small">No open-web • No realtime data • English-only • ≤6 claims</text>
+
+  <rect x="40" y="630" width="780" height="140" class="thin"/>
+  <text x="50" y="655" class="label">UI Output</text>
+  <text x="50" y="675" class="small">Per-claim cards (✅/❌/⚪) • snippet highlights • calibrated probability • JSON export</text>
+</svg>
