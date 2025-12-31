@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.DS_Store
+.vscode/
+.idea/
+*.docx
+*.png
+*.svg
+analyze_docs.py
+docs_content.txt

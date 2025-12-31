@@ -1,0 +1,4 @@
+asyncio
+argparse
+colorama
+typing
