@@ -2,6 +2,9 @@ import json
 import aiohttp
 from core.llm_interface import LLMInterface
 
+# Timeout so we fail fast if Ollama is not running instead of hanging indefinitely
+OLLAMA_TIMEOUT = aiohttp.ClientTimeout(total=30, connect=5)
+
 class OllamaLLM(LLMInterface):
     """
     Implements LLMInterface for local generation via Ollama's REST API.
@@ -24,12 +27,15 @@ class OllamaLLM(LLMInterface):
         if kwargs:
             payload["options"] = kwargs
 
-        async with aiohttp.ClientSession() as session:
+        async with aiohttp.ClientSession(timeout=OLLAMA_TIMEOUT) as session:
             try:
                 async with session.post(self.base_url, json=payload) as response:
                     response.raise_for_status()
                     data = await response.json()
                     return data.get("response", "")
+            except aiohttp.ClientConnectorError:
+                print(f"[OllamaLLM] Cannot connect to Ollama daemon at {self.base_url}. Is 'ollama serve' running?")
+                return "[Error: Ollama not running]"
             except Exception as e:
                 print(f"Error accessing Ollama [{self.model_name}]: {e}")
                 return "[Error generating response]"
@@ -51,7 +57,7 @@ class OllamaLLM(LLMInterface):
         if kwargs:
             payload["options"] = kwargs
 
-        async with aiohttp.ClientSession() as session:
+        async with aiohttp.ClientSession(timeout=OLLAMA_TIMEOUT) as session:
             try:
                 async with session.post(self.base_url, json=payload) as response:
                     response.raise_for_status()
@@ -62,6 +68,10 @@ class OllamaLLM(LLMInterface):
                     except json.JSONDecodeError:
                         print(f"Failed to parse Ollama JSON: {response_text}")
                         return {}
+            except aiohttp.ClientConnectorError:
+                print(f"[OllamaLLM] Cannot connect to Ollama daemon at {self.base_url}. Is 'ollama serve' running?")
+                return {}
             except Exception as e:
                 print(f"Error accessing Ollama [{self.model_name}]: {e}")
                 return {}
+

@@ -31,7 +31,6 @@ class LLMEvaluator:
                     self.use_heuristic = True
                 else:
                     import sys
-                    import os
                     sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
                     try:
                         from core.gemini_llm import GeminiLLM
