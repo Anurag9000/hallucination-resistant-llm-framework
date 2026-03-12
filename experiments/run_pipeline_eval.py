@@ -58,6 +58,7 @@ if __name__ == "__main__":
     parser.add_argument("--num_samples", type=int, default=0, help="Number of samples to run")
     parser.add_argument("--provider", type=str, default="mock", choices=["mock", "ollama", "gemini"], help="LLM provider backend")
     parser.add_argument("--model_name", type=str, default="", help="Specific model tag")
+    parser.add_argument("--output_dir", type=str, default="", help="Custom directory to save CSV results")
     args = parser.parse_args()
     
     # Load dataset
@@ -111,7 +112,11 @@ if __name__ == "__main__":
             speedup = (first_run['latency_ms'] - second_run['latency_ms']) / first_run['latency_ms']
             print(f"  Speedup: {speedup:.2%}")
         
-    results_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "results")
+    if hasattr(args, 'output_dir') and args.output_dir:
+        results_dir = args.output_dir
+    else:
+        results_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "results")
+        
     os.makedirs(results_dir, exist_ok=True)
     csv_file = os.path.join(results_dir, "pipeline_eval.csv")
 

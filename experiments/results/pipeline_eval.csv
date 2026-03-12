@@ -1,3 +1,0 @@
-id,query,latency_ms,output_length,num_verified,num_likely,num_omitted,badge_precision,faithfulness_score,cache_size_after
-fact_1,What is the capital of Mars?,201.37,77,0,0,1,0.0,0.04,1
-fact_1,What is the capital of Mars?,100.42,77,0,0,1,0.0,0.04,1

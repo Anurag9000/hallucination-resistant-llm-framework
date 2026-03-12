@@ -70,6 +70,7 @@ if __name__ == "__main__":
     parser.add_argument("--session_length", type=int, default=50, help="Number of intermediate turns")
     parser.add_argument("--provider", type=str, default="mock", choices=["mock", "ollama", "gemini"], help="LLM provider backend")
     parser.add_argument("--model_name", type=str, default="", help="Specific model tag")
+    parser.add_argument("--output_dir", type=str, default="", help="Custom directory to save CSV results")
     args = parser.parse_args()
     
     # Load dataset
@@ -114,7 +115,11 @@ if __name__ == "__main__":
               f"Retrieval Hit: {r['retrieval_keyword_hit']} | Contradiction Caught: {r['contradiction_caught']}")
 
     # Save to CSV
-    results_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "results")
+    if hasattr(args, 'output_dir') and args.output_dir:
+        results_dir = args.output_dir
+    else:
+        results_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "results")
+        
     os.makedirs(results_dir, exist_ok=True)
     csv_file = os.path.join(results_dir, "memory_persistence.csv")
     

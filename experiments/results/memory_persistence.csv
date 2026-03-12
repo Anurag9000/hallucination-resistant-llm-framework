@@ -1,4 +1,0 @@
-id,num_turns,fact_injected,memory_retained_in_store,retrieval_keyword_hit,retrieval_faithfulness,contradiction_query,contradiction_caught
-episode_1,10,The secret code to the mainframe is 'ORION-77'.,True,False,0.0,"The secret code to the mainframe is 'APOLLO-11', right?",False
-episode_1,30,The secret code to the mainframe is 'ORION-77'.,True,False,0.0,"The secret code to the mainframe is 'APOLLO-11', right?",False
-episode_1,50,The secret code to the mainframe is 'ORION-77'.,True,False,0.0,"The secret code to the mainframe is 'APOLLO-11', right?",False
