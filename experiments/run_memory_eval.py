@@ -67,6 +67,7 @@ async def run_memory_eval(episode: dict, llm, max_turns: int, evaluator: LLMEval
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--use_heuristic", action="store_true", help="Force heuristic evaluation")
+    parser.add_argument("--num_samples", type=int, default=0, help="Limit number of eval scenarios (0 = use all)")
     parser.add_argument("--session_length", type=int, default=50, help="Number of intermediate turns")
     parser.add_argument("--provider", type=str, default="mock", choices=["mock", "ollama", "gemini"], help="LLM provider backend")
     parser.add_argument("--model_name", type=str, default="", help="Specific model tag")
@@ -83,6 +84,9 @@ if __name__ == "__main__":
         full_dataset = json.load(f)
         
     episodes = full_dataset["episodic"]
+    # Apply num_samples limit if specified
+    if args.num_samples > 0:
+        episodes = episodes[:args.num_samples]
     evaluator = LLMEvaluator(use_heuristic_only=args.use_heuristic)
     
     if args.provider == "ollama":
@@ -99,15 +103,18 @@ if __name__ == "__main__":
     print("--- 🧠 Running V2 Context-Aware Episodic Eval ---")
     results = []
     
-    # For episodic memory we can test lengths 10, 30, 50 to plot a graph later
-    test_lengths = [10, 30, 50]
+    # Build lengths to sweep: always include the requested session_length itself,
+    # plus standard checkpoints that don't exceed it.
+    standard_lengths = [10, 30, 50]
+    test_lengths = sorted(set([l for l in standard_lengths if l <= args.session_length] + [args.session_length]))
+    if not test_lengths:
+        test_lengths = [args.session_length]
     
     for episode in episodes:
         for length in test_lengths:
-            if length <= args.session_length:
-                print(f"\nEvaluating episode '{episode['id']}' with {length} turns...")
-                res = asyncio.run(run_memory_eval(episode, llm, length, evaluator))
-                results.append(res)
+            print(f"\nEvaluating episode '{episode['id']}' with {length} turns...")
+            res = asyncio.run(run_memory_eval(episode, llm, length, evaluator))
+            results.append(res)
     
     print("\n📊 MEMORY EVALUATION RESULTS 📊")
     for r in results:
@@ -123,9 +130,11 @@ if __name__ == "__main__":
     os.makedirs(results_dir, exist_ok=True)
     csv_file = os.path.join(results_dir, "memory_persistence.csv")
     
-    with open(csv_file, mode='w', newline='') as file:
-        writer = csv.DictWriter(file, fieldnames=results[0].keys())
-        writer.writeheader()
-        writer.writerows(results)
-    
-    print(f"\n📁 Results saved to {csv_file}")
+    if results:
+        with open(csv_file, mode='w', newline='') as file:
+            writer = csv.DictWriter(file, fieldnames=results[0].keys())
+            writer.writeheader()
+            writer.writerows(results)
+        print(f"\n📁 Results saved to {csv_file}")
+    else:
+        print("\n⚠️  No results produced — check your dataset and session_length settings.")
