@@ -17,13 +17,30 @@ async def main():
                         help="Select model: v1 (EdgeCore), v1.1 (FinalThought), v2 (Context-Aware)")
     parser.add_argument("--query", type=str, default="What is the capital of Mars?", help="User query")
     parser.add_argument("--learn", type=str, help="For v2: Inject a fact into memory before running")
+    parser.add_argument("--provider", type=str, default="mock", choices=["mock", "ollama", "gemini"], 
+                        help="LLM provider backend")
+    parser.add_argument("--model_name", type=str, default="", help="Specific model tag (e.g., llama3.2, gemini-2.5-flash)")
     
     args = parser.parse_args()
 
     print(f"🚀 Initializing Framework with Model: {args.model}")
     
+    # Provider Initialization
+    if args.provider == "ollama":
+        from core.ollama_llm import OllamaLLM
+        model_name = args.model_name or "llama3.2"
+        print(f"--- Connecting to Local Ollama ({model_name}) ---")
+        llm = OllamaLLM(model_name=model_name)
+    elif args.provider == "gemini":
+        from core.gemini_llm import GeminiLLM
+        model_name = args.model_name or "gemini-2.5-flash"
+        print(f"--- Connecting to Remote Gemini ({model_name}) ---")
+        llm = GeminiLLM(model_name=model_name)
+    else:
+        print("--- Loading MockLLM Simulator ---")
+        llm = MockLLM()
+
     # Shared Backbone Initialization
-    llm = MockLLM()
     cache = VerificationCache(ttl_seconds=Config.VERIFIER_CACHE_TTL)
     verifier_factory = VerifierFactory(llm, cache)
     

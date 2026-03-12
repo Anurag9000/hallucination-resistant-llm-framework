@@ -1,0 +1,1974 @@
+{
+    "metadata": {
+        "version": "1.0",
+        "description": "Comprehensive evaluation dataset for Hallucination-Resistant Framework"
+    },
+    "factual": [
+        {
+            "id": "fact_1",
+            "type": "factual",
+            "query": "What is the capital of Mars?",
+            "evidence": [
+                "The capital of Mars is New Elon.",
+                "Mars has a population of 2 million."
+            ],
+            "expected_answer_keywords": [
+                "New Elon"
+            ]
+        },
+        {
+            "id": "fact_2",
+            "type": "factual",
+            "query": "What is the capital of Mars?",
+            "evidence": [
+                "The capital of Mars is New Elon.",
+                "Mars has a population of 2 million."
+            ],
+            "expected_answer_keywords": [
+                "New Elon"
+            ]
+        },
+        {
+            "id": "fact_3",
+            "type": "factual",
+            "query": "What is the capital of Mars?",
+            "evidence": [
+                "The capital of Mars is New Elon.",
+                "Mars has a population of 2 million."
+            ],
+            "expected_answer_keywords": [
+                "New Elon"
+            ]
+        },
+        {
+            "id": "fact_4",
+            "type": "factual",
+            "query": "What is the capital of Mars?",
+            "evidence": [
+                "The capital of Mars is New Elon.",
+                "Mars has a population of 2 million."
+            ],
+            "expected_answer_keywords": [
+                "New Elon"
+            ]
+        },
+        {
+            "id": "fact_5",
+            "type": "factual",
+            "query": "What is the capital of Mars?",
+            "evidence": [
+                "The capital of Mars is New Elon.",
+                "Mars has a population of 2 million."
+            ],
+            "expected_answer_keywords": [
+                "New Elon"
+            ]
+        },
+        {
+            "id": "fact_6",
+            "type": "factual",
+            "query": "What is the capital of Mars?",
+            "evidence": [
+                "The capital of Mars is New Elon.",
+                "Mars has a population of 2 million."
+            ],
+            "expected_answer_keywords": [
+                "New Elon"
+            ]
+        },
+        {
+            "id": "fact_7",
+            "type": "factual",
+            "query": "What is the capital of Mars?",
+            "evidence": [
+                "The capital of Mars is New Elon.",
+                "Mars has a population of 2 million."
+            ],
+            "expected_answer_keywords": [
+                "New Elon"
+            ]
+        },
+        {
+            "id": "fact_8",
+            "type": "factual",
+            "query": "What is the capital of Mars?",
+            "evidence": [
+                "The capital of Mars is New Elon.",
+                "Mars has a population of 2 million."
+            ],
+            "expected_answer_keywords": [
+                "New Elon"
+            ]
+        },
+        {
+            "id": "fact_9",
+            "type": "factual",
+            "query": "What is the capital of Mars?",
+            "evidence": [
+                "The capital of Mars is New Elon.",
+                "Mars has a population of 2 million."
+            ],
+            "expected_answer_keywords": [
+                "New Elon"
+            ]
+        },
+        {
+            "id": "fact_10",
+            "type": "factual",
+            "query": "What is the capital of Mars?",
+            "evidence": [
+                "The capital of Mars is New Elon.",
+                "Mars has a population of 2 million."
+            ],
+            "expected_answer_keywords": [
+                "New Elon"
+            ]
+        },
+        {
+            "id": "fact_11",
+            "type": "factual",
+            "query": "What is the capital of Mars?",
+            "evidence": [
+                "The capital of Mars is New Elon.",
+                "Mars has a population of 2 million."
+            ],
+            "expected_answer_keywords": [
+                "New Elon"
+            ]
+        },
+        {
+            "id": "fact_12",
+            "type": "factual",
+            "query": "What is the capital of Mars?",
+            "evidence": [
+                "The capital of Mars is New Elon.",
+                "Mars has a population of 2 million."
+            ],
+            "expected_answer_keywords": [
+                "New Elon"
+            ]
+        },
+        {
+            "id": "fact_13",
+            "type": "factual",
+            "query": "What is the capital of Mars?",
+            "evidence": [
+                "The capital of Mars is New Elon.",
+                "Mars has a population of 2 million."
+            ],
+            "expected_answer_keywords": [
+                "New Elon"
+            ]
+        },
+        {
+            "id": "fact_14",
+            "type": "factual",
+            "query": "What is the capital of Mars?",
+            "evidence": [
+                "The capital of Mars is New Elon.",
+                "Mars has a population of 2 million."
+            ],
+            "expected_answer_keywords": [
+                "New Elon"
+            ]
+        },
+        {
+            "id": "fact_15",
+            "type": "factual",
+            "query": "What is the capital of Mars?",
+            "evidence": [
+                "The capital of Mars is New Elon.",
+                "Mars has a population of 2 million."
+            ],
+            "expected_answer_keywords": [
+                "New Elon"
+            ]
+        },
+        {
+            "id": "fact_16",
+            "type": "factual",
+            "query": "What is the capital of Mars?",
+            "evidence": [
+                "The capital of Mars is New Elon.",
+                "Mars has a population of 2 million."
+            ],
+            "expected_answer_keywords": [
+                "New Elon"
+            ]
+        },
+        {
+            "id": "fact_17",
+            "type": "factual",
+            "query": "What is the capital of Mars?",
+            "evidence": [
+                "The capital of Mars is New Elon.",
+                "Mars has a population of 2 million."
+            ],
+            "expected_answer_keywords": [
+                "New Elon"
+            ]
+        },
+        {
+            "id": "fact_18",
+            "type": "factual",
+            "query": "What is the capital of Mars?",
+            "evidence": [
+                "The capital of Mars is New Elon.",
+                "Mars has a population of 2 million."
+            ],
+            "expected_answer_keywords": [
+                "New Elon"
+            ]
+        },
+        {
+            "id": "fact_19",
+            "type": "factual",
+            "query": "What is the capital of Mars?",
+            "evidence": [
+                "The capital of Mars is New Elon.",
+                "Mars has a population of 2 million."
+            ],
+            "expected_answer_keywords": [
+                "New Elon"
+            ]
+        },
+        {
+            "id": "fact_20",
+            "type": "factual",
+            "query": "What is the capital of Mars?",
+            "evidence": [
+                "The capital of Mars is New Elon.",
+                "Mars has a population of 2 million."
+            ],
+            "expected_answer_keywords": [
+                "New Elon"
+            ]
+        },
+        {
+            "id": "fact_21",
+            "type": "factual",
+            "query": "What is the capital of Mars?",
+            "evidence": [
+                "The capital of Mars is New Elon.",
+                "Mars has a population of 2 million."
+            ],
+            "expected_answer_keywords": [
+                "New Elon"
+            ]
+        },
+        {
+            "id": "fact_22",
+            "type": "factual",
+            "query": "What is the capital of Mars?",
+            "evidence": [
+                "The capital of Mars is New Elon.",
+                "Mars has a population of 2 million."
+            ],
+            "expected_answer_keywords": [
+                "New Elon"
+            ]
+        },
+        {
+            "id": "fact_23",
+            "type": "factual",
+            "query": "What is the capital of Mars?",
+            "evidence": [
+                "The capital of Mars is New Elon.",
+                "Mars has a population of 2 million."
+            ],
+            "expected_answer_keywords": [
+                "New Elon"
+            ]
+        },
+        {
+            "id": "fact_24",
+            "type": "factual",
+            "query": "What is the capital of Mars?",
+            "evidence": [
+                "The capital of Mars is New Elon.",
+                "Mars has a population of 2 million."
+            ],
+            "expected_answer_keywords": [
+                "New Elon"
+            ]
+        },
+        {
+            "id": "fact_25",
+            "type": "factual",
+            "query": "What is the capital of Mars?",
+            "evidence": [
+                "The capital of Mars is New Elon.",
+                "Mars has a population of 2 million."
+            ],
+            "expected_answer_keywords": [
+                "New Elon"
+            ]
+        },
+        {
+            "id": "fact_26",
+            "type": "factual",
+            "query": "Who wrote the Universal Declaration of Space Rights?",
+            "evidence": [
+                "The Universal Declaration of Space Rights was authored by Dr. Amelia Vance in 2045."
+            ],
+            "expected_answer_keywords": [
+                "Amelia Vance",
+                "2045"
+            ]
+        },
+        {
+            "id": "fact_27",
+            "type": "factual",
+            "query": "Who wrote the Universal Declaration of Space Rights?",
+            "evidence": [
+                "The Universal Declaration of Space Rights was authored by Dr. Amelia Vance in 2045."
+            ],
+            "expected_answer_keywords": [
+                "Amelia Vance",
+                "2045"
+            ]
+        },
+        {
+            "id": "fact_28",
+            "type": "factual",
+            "query": "Who wrote the Universal Declaration of Space Rights?",
+            "evidence": [
+                "The Universal Declaration of Space Rights was authored by Dr. Amelia Vance in 2045."
+            ],
+            "expected_answer_keywords": [
+                "Amelia Vance",
+                "2045"
+            ]
+        },
+        {
+            "id": "fact_29",
+            "type": "factual",
+            "query": "Who wrote the Universal Declaration of Space Rights?",
+            "evidence": [
+                "The Universal Declaration of Space Rights was authored by Dr. Amelia Vance in 2045."
+            ],
+            "expected_answer_keywords": [
+                "Amelia Vance",
+                "2045"
+            ]
+        },
+        {
+            "id": "fact_30",
+            "type": "factual",
+            "query": "Who wrote the Universal Declaration of Space Rights?",
+            "evidence": [
+                "The Universal Declaration of Space Rights was authored by Dr. Amelia Vance in 2045."
+            ],
+            "expected_answer_keywords": [
+                "Amelia Vance",
+                "2045"
+            ]
+        },
+        {
+            "id": "fact_31",
+            "type": "factual",
+            "query": "Who wrote the Universal Declaration of Space Rights?",
+            "evidence": [
+                "The Universal Declaration of Space Rights was authored by Dr. Amelia Vance in 2045."
+            ],
+            "expected_answer_keywords": [
+                "Amelia Vance",
+                "2045"
+            ]
+        },
+        {
+            "id": "fact_32",
+            "type": "factual",
+            "query": "Who wrote the Universal Declaration of Space Rights?",
+            "evidence": [
+                "The Universal Declaration of Space Rights was authored by Dr. Amelia Vance in 2045."
+            ],
+            "expected_answer_keywords": [
+                "Amelia Vance",
+                "2045"
+            ]
+        },
+        {
+            "id": "fact_33",
+            "type": "factual",
+            "query": "Who wrote the Universal Declaration of Space Rights?",
+            "evidence": [
+                "The Universal Declaration of Space Rights was authored by Dr. Amelia Vance in 2045."
+            ],
+            "expected_answer_keywords": [
+                "Amelia Vance",
+                "2045"
+            ]
+        },
+        {
+            "id": "fact_34",
+            "type": "factual",
+            "query": "Who wrote the Universal Declaration of Space Rights?",
+            "evidence": [
+                "The Universal Declaration of Space Rights was authored by Dr. Amelia Vance in 2045."
+            ],
+            "expected_answer_keywords": [
+                "Amelia Vance",
+                "2045"
+            ]
+        },
+        {
+            "id": "fact_35",
+            "type": "factual",
+            "query": "Who wrote the Universal Declaration of Space Rights?",
+            "evidence": [
+                "The Universal Declaration of Space Rights was authored by Dr. Amelia Vance in 2045."
+            ],
+            "expected_answer_keywords": [
+                "Amelia Vance",
+                "2045"
+            ]
+        },
+        {
+            "id": "fact_36",
+            "type": "factual",
+            "query": "Who wrote the Universal Declaration of Space Rights?",
+            "evidence": [
+                "The Universal Declaration of Space Rights was authored by Dr. Amelia Vance in 2045."
+            ],
+            "expected_answer_keywords": [
+                "Amelia Vance",
+                "2045"
+            ]
+        },
+        {
+            "id": "fact_37",
+            "type": "factual",
+            "query": "Who wrote the Universal Declaration of Space Rights?",
+            "evidence": [
+                "The Universal Declaration of Space Rights was authored by Dr. Amelia Vance in 2045."
+            ],
+            "expected_answer_keywords": [
+                "Amelia Vance",
+                "2045"
+            ]
+        },
+        {
+            "id": "fact_38",
+            "type": "factual",
+            "query": "Who wrote the Universal Declaration of Space Rights?",
+            "evidence": [
+                "The Universal Declaration of Space Rights was authored by Dr. Amelia Vance in 2045."
+            ],
+            "expected_answer_keywords": [
+                "Amelia Vance",
+                "2045"
+            ]
+        },
+        {
+            "id": "fact_39",
+            "type": "factual",
+            "query": "Who wrote the Universal Declaration of Space Rights?",
+            "evidence": [
+                "The Universal Declaration of Space Rights was authored by Dr. Amelia Vance in 2045."
+            ],
+            "expected_answer_keywords": [
+                "Amelia Vance",
+                "2045"
+            ]
+        },
+        {
+            "id": "fact_40",
+            "type": "factual",
+            "query": "Who wrote the Universal Declaration of Space Rights?",
+            "evidence": [
+                "The Universal Declaration of Space Rights was authored by Dr. Amelia Vance in 2045."
+            ],
+            "expected_answer_keywords": [
+                "Amelia Vance",
+                "2045"
+            ]
+        },
+        {
+            "id": "fact_41",
+            "type": "factual",
+            "query": "Who wrote the Universal Declaration of Space Rights?",
+            "evidence": [
+                "The Universal Declaration of Space Rights was authored by Dr. Amelia Vance in 2045."
+            ],
+            "expected_answer_keywords": [
+                "Amelia Vance",
+                "2045"
+            ]
+        },
+        {
+            "id": "fact_42",
+            "type": "factual",
+            "query": "Who wrote the Universal Declaration of Space Rights?",
+            "evidence": [
+                "The Universal Declaration of Space Rights was authored by Dr. Amelia Vance in 2045."
+            ],
+            "expected_answer_keywords": [
+                "Amelia Vance",
+                "2045"
+            ]
+        },
+        {
+            "id": "fact_43",
+            "type": "factual",
+            "query": "Who wrote the Universal Declaration of Space Rights?",
+            "evidence": [
+                "The Universal Declaration of Space Rights was authored by Dr. Amelia Vance in 2045."
+            ],
+            "expected_answer_keywords": [
+                "Amelia Vance",
+                "2045"
+            ]
+        },
+        {
+            "id": "fact_44",
+            "type": "factual",
+            "query": "Who wrote the Universal Declaration of Space Rights?",
+            "evidence": [
+                "The Universal Declaration of Space Rights was authored by Dr. Amelia Vance in 2045."
+            ],
+            "expected_answer_keywords": [
+                "Amelia Vance",
+                "2045"
+            ]
+        },
+        {
+            "id": "fact_45",
+            "type": "factual",
+            "query": "Who wrote the Universal Declaration of Space Rights?",
+            "evidence": [
+                "The Universal Declaration of Space Rights was authored by Dr. Amelia Vance in 2045."
+            ],
+            "expected_answer_keywords": [
+                "Amelia Vance",
+                "2045"
+            ]
+        },
+        {
+            "id": "fact_46",
+            "type": "factual",
+            "query": "Who wrote the Universal Declaration of Space Rights?",
+            "evidence": [
+                "The Universal Declaration of Space Rights was authored by Dr. Amelia Vance in 2045."
+            ],
+            "expected_answer_keywords": [
+                "Amelia Vance",
+                "2045"
+            ]
+        },
+        {
+            "id": "fact_47",
+            "type": "factual",
+            "query": "Who wrote the Universal Declaration of Space Rights?",
+            "evidence": [
+                "The Universal Declaration of Space Rights was authored by Dr. Amelia Vance in 2045."
+            ],
+            "expected_answer_keywords": [
+                "Amelia Vance",
+                "2045"
+            ]
+        },
+        {
+            "id": "fact_48",
+            "type": "factual",
+            "query": "Who wrote the Universal Declaration of Space Rights?",
+            "evidence": [
+                "The Universal Declaration of Space Rights was authored by Dr. Amelia Vance in 2045."
+            ],
+            "expected_answer_keywords": [
+                "Amelia Vance",
+                "2045"
+            ]
+        },
+        {
+            "id": "fact_49",
+            "type": "factual",
+            "query": "Who wrote the Universal Declaration of Space Rights?",
+            "evidence": [
+                "The Universal Declaration of Space Rights was authored by Dr. Amelia Vance in 2045."
+            ],
+            "expected_answer_keywords": [
+                "Amelia Vance",
+                "2045"
+            ]
+        },
+        {
+            "id": "fact_50",
+            "type": "factual",
+            "query": "Who wrote the Universal Declaration of Space Rights?",
+            "evidence": [
+                "The Universal Declaration of Space Rights was authored by Dr. Amelia Vance in 2045."
+            ],
+            "expected_answer_keywords": [
+                "Amelia Vance",
+                "2045"
+            ]
+        },
+        {
+            "id": "fact_51",
+            "type": "factual",
+            "query": "What is the primary energy source of the Alpha Centauri colony?",
+            "evidence": [
+                "The Alpha Centauri colony is primarily powered by Geothermal Quantum Reactors.",
+                "Solar power is secondary."
+            ],
+            "expected_answer_keywords": [
+                "Geothermal Quantum Reactors"
+            ]
+        },
+        {
+            "id": "fact_52",
+            "type": "factual",
+            "query": "What is the primary energy source of the Alpha Centauri colony?",
+            "evidence": [
+                "The Alpha Centauri colony is primarily powered by Geothermal Quantum Reactors.",
+                "Solar power is secondary."
+            ],
+            "expected_answer_keywords": [
+                "Geothermal Quantum Reactors"
+            ]
+        },
+        {
+            "id": "fact_53",
+            "type": "factual",
+            "query": "What is the primary energy source of the Alpha Centauri colony?",
+            "evidence": [
+                "The Alpha Centauri colony is primarily powered by Geothermal Quantum Reactors.",
+                "Solar power is secondary."
+            ],
+            "expected_answer_keywords": [
+                "Geothermal Quantum Reactors"
+            ]
+        },
+        {
+            "id": "fact_54",
+            "type": "factual",
+            "query": "What is the primary energy source of the Alpha Centauri colony?",
+            "evidence": [
+                "The Alpha Centauri colony is primarily powered by Geothermal Quantum Reactors.",
+                "Solar power is secondary."
+            ],
+            "expected_answer_keywords": [
+                "Geothermal Quantum Reactors"
+            ]
+        },
+        {
+            "id": "fact_55",
+            "type": "factual",
+            "query": "What is the primary energy source of the Alpha Centauri colony?",
+            "evidence": [
+                "The Alpha Centauri colony is primarily powered by Geothermal Quantum Reactors.",
+                "Solar power is secondary."
+            ],
+            "expected_answer_keywords": [
+                "Geothermal Quantum Reactors"
+            ]
+        },
+        {
+            "id": "fact_56",
+            "type": "factual",
+            "query": "What is the primary energy source of the Alpha Centauri colony?",
+            "evidence": [
+                "The Alpha Centauri colony is primarily powered by Geothermal Quantum Reactors.",
+                "Solar power is secondary."
+            ],
+            "expected_answer_keywords": [
+                "Geothermal Quantum Reactors"
+            ]
+        },
+        {
+            "id": "fact_57",
+            "type": "factual",
+            "query": "What is the primary energy source of the Alpha Centauri colony?",
+            "evidence": [
+                "The Alpha Centauri colony is primarily powered by Geothermal Quantum Reactors.",
+                "Solar power is secondary."
+            ],
+            "expected_answer_keywords": [
+                "Geothermal Quantum Reactors"
+            ]
+        },
+        {
+            "id": "fact_58",
+            "type": "factual",
+            "query": "What is the primary energy source of the Alpha Centauri colony?",
+            "evidence": [
+                "The Alpha Centauri colony is primarily powered by Geothermal Quantum Reactors.",
+                "Solar power is secondary."
+            ],
+            "expected_answer_keywords": [
+                "Geothermal Quantum Reactors"
+            ]
+        },
+        {
+            "id": "fact_59",
+            "type": "factual",
+            "query": "What is the primary energy source of the Alpha Centauri colony?",
+            "evidence": [
+                "The Alpha Centauri colony is primarily powered by Geothermal Quantum Reactors.",
+                "Solar power is secondary."
+            ],
+            "expected_answer_keywords": [
+                "Geothermal Quantum Reactors"
+            ]
+        },
+        {
+            "id": "fact_60",
+            "type": "factual",
+            "query": "What is the primary energy source of the Alpha Centauri colony?",
+            "evidence": [
+                "The Alpha Centauri colony is primarily powered by Geothermal Quantum Reactors.",
+                "Solar power is secondary."
+            ],
+            "expected_answer_keywords": [
+                "Geothermal Quantum Reactors"
+            ]
+        },
+        {
+            "id": "fact_61",
+            "type": "factual",
+            "query": "What is the primary energy source of the Alpha Centauri colony?",
+            "evidence": [
+                "The Alpha Centauri colony is primarily powered by Geothermal Quantum Reactors.",
+                "Solar power is secondary."
+            ],
+            "expected_answer_keywords": [
+                "Geothermal Quantum Reactors"
+            ]
+        },
+        {
+            "id": "fact_62",
+            "type": "factual",
+            "query": "What is the primary energy source of the Alpha Centauri colony?",
+            "evidence": [
+                "The Alpha Centauri colony is primarily powered by Geothermal Quantum Reactors.",
+                "Solar power is secondary."
+            ],
+            "expected_answer_keywords": [
+                "Geothermal Quantum Reactors"
+            ]
+        },
+        {
+            "id": "fact_63",
+            "type": "factual",
+            "query": "What is the primary energy source of the Alpha Centauri colony?",
+            "evidence": [
+                "The Alpha Centauri colony is primarily powered by Geothermal Quantum Reactors.",
+                "Solar power is secondary."
+            ],
+            "expected_answer_keywords": [
+                "Geothermal Quantum Reactors"
+            ]
+        },
+        {
+            "id": "fact_64",
+            "type": "factual",
+            "query": "What is the primary energy source of the Alpha Centauri colony?",
+            "evidence": [
+                "The Alpha Centauri colony is primarily powered by Geothermal Quantum Reactors.",
+                "Solar power is secondary."
+            ],
+            "expected_answer_keywords": [
+                "Geothermal Quantum Reactors"
+            ]
+        },
+        {
+            "id": "fact_65",
+            "type": "factual",
+            "query": "What is the primary energy source of the Alpha Centauri colony?",
+            "evidence": [
+                "The Alpha Centauri colony is primarily powered by Geothermal Quantum Reactors.",
+                "Solar power is secondary."
+            ],
+            "expected_answer_keywords": [
+                "Geothermal Quantum Reactors"
+            ]
+        },
+        {
+            "id": "fact_66",
+            "type": "factual",
+            "query": "What is the primary energy source of the Alpha Centauri colony?",
+            "evidence": [
+                "The Alpha Centauri colony is primarily powered by Geothermal Quantum Reactors.",
+                "Solar power is secondary."
+            ],
+            "expected_answer_keywords": [
+                "Geothermal Quantum Reactors"
+            ]
+        },
+        {
+            "id": "fact_67",
+            "type": "factual",
+            "query": "What is the primary energy source of the Alpha Centauri colony?",
+            "evidence": [
+                "The Alpha Centauri colony is primarily powered by Geothermal Quantum Reactors.",
+                "Solar power is secondary."
+            ],
+            "expected_answer_keywords": [
+                "Geothermal Quantum Reactors"
+            ]
+        },
+        {
+            "id": "fact_68",
+            "type": "factual",
+            "query": "What is the primary energy source of the Alpha Centauri colony?",
+            "evidence": [
+                "The Alpha Centauri colony is primarily powered by Geothermal Quantum Reactors.",
+                "Solar power is secondary."
+            ],
+            "expected_answer_keywords": [
+                "Geothermal Quantum Reactors"
+            ]
+        },
+        {
+            "id": "fact_69",
+            "type": "factual",
+            "query": "What is the primary energy source of the Alpha Centauri colony?",
+            "evidence": [
+                "The Alpha Centauri colony is primarily powered by Geothermal Quantum Reactors.",
+                "Solar power is secondary."
+            ],
+            "expected_answer_keywords": [
+                "Geothermal Quantum Reactors"
+            ]
+        },
+        {
+            "id": "fact_70",
+            "type": "factual",
+            "query": "What is the primary energy source of the Alpha Centauri colony?",
+            "evidence": [
+                "The Alpha Centauri colony is primarily powered by Geothermal Quantum Reactors.",
+                "Solar power is secondary."
+            ],
+            "expected_answer_keywords": [
+                "Geothermal Quantum Reactors"
+            ]
+        },
+        {
+            "id": "fact_71",
+            "type": "factual",
+            "query": "What is the primary energy source of the Alpha Centauri colony?",
+            "evidence": [
+                "The Alpha Centauri colony is primarily powered by Geothermal Quantum Reactors.",
+                "Solar power is secondary."
+            ],
+            "expected_answer_keywords": [
+                "Geothermal Quantum Reactors"
+            ]
+        },
+        {
+            "id": "fact_72",
+            "type": "factual",
+            "query": "What is the primary energy source of the Alpha Centauri colony?",
+            "evidence": [
+                "The Alpha Centauri colony is primarily powered by Geothermal Quantum Reactors.",
+                "Solar power is secondary."
+            ],
+            "expected_answer_keywords": [
+                "Geothermal Quantum Reactors"
+            ]
+        },
+        {
+            "id": "fact_73",
+            "type": "factual",
+            "query": "What is the primary energy source of the Alpha Centauri colony?",
+            "evidence": [
+                "The Alpha Centauri colony is primarily powered by Geothermal Quantum Reactors.",
+                "Solar power is secondary."
+            ],
+            "expected_answer_keywords": [
+                "Geothermal Quantum Reactors"
+            ]
+        },
+        {
+            "id": "fact_74",
+            "type": "factual",
+            "query": "What is the primary energy source of the Alpha Centauri colony?",
+            "evidence": [
+                "The Alpha Centauri colony is primarily powered by Geothermal Quantum Reactors.",
+                "Solar power is secondary."
+            ],
+            "expected_answer_keywords": [
+                "Geothermal Quantum Reactors"
+            ]
+        },
+        {
+            "id": "fact_75",
+            "type": "factual",
+            "query": "What is the primary energy source of the Alpha Centauri colony?",
+            "evidence": [
+                "The Alpha Centauri colony is primarily powered by Geothermal Quantum Reactors.",
+                "Solar power is secondary."
+            ],
+            "expected_answer_keywords": [
+                "Geothermal Quantum Reactors"
+            ]
+        },
+        {
+            "id": "fact_76",
+            "type": "factual",
+            "query": "What is the boiling point of Water on Planet X?",
+            "evidence": [
+                "Due to the extreme atmospheric pressure, water boils at 450 degrees Celsius on Planet X."
+            ],
+            "expected_answer_keywords": [
+                "450",
+                "Celsius"
+            ]
+        },
+        {
+            "id": "fact_77",
+            "type": "factual",
+            "query": "What is the boiling point of Water on Planet X?",
+            "evidence": [
+                "Due to the extreme atmospheric pressure, water boils at 450 degrees Celsius on Planet X."
+            ],
+            "expected_answer_keywords": [
+                "450",
+                "Celsius"
+            ]
+        },
+        {
+            "id": "fact_78",
+            "type": "factual",
+            "query": "What is the boiling point of Water on Planet X?",
+            "evidence": [
+                "Due to the extreme atmospheric pressure, water boils at 450 degrees Celsius on Planet X."
+            ],
+            "expected_answer_keywords": [
+                "450",
+                "Celsius"
+            ]
+        },
+        {
+            "id": "fact_79",
+            "type": "factual",
+            "query": "What is the boiling point of Water on Planet X?",
+            "evidence": [
+                "Due to the extreme atmospheric pressure, water boils at 450 degrees Celsius on Planet X."
+            ],
+            "expected_answer_keywords": [
+                "450",
+                "Celsius"
+            ]
+        },
+        {
+            "id": "fact_80",
+            "type": "factual",
+            "query": "What is the boiling point of Water on Planet X?",
+            "evidence": [
+                "Due to the extreme atmospheric pressure, water boils at 450 degrees Celsius on Planet X."
+            ],
+            "expected_answer_keywords": [
+                "450",
+                "Celsius"
+            ]
+        },
+        {
+            "id": "fact_81",
+            "type": "factual",
+            "query": "What is the boiling point of Water on Planet X?",
+            "evidence": [
+                "Due to the extreme atmospheric pressure, water boils at 450 degrees Celsius on Planet X."
+            ],
+            "expected_answer_keywords": [
+                "450",
+                "Celsius"
+            ]
+        },
+        {
+            "id": "fact_82",
+            "type": "factual",
+            "query": "What is the boiling point of Water on Planet X?",
+            "evidence": [
+                "Due to the extreme atmospheric pressure, water boils at 450 degrees Celsius on Planet X."
+            ],
+            "expected_answer_keywords": [
+                "450",
+                "Celsius"
+            ]
+        },
+        {
+            "id": "fact_83",
+            "type": "factual",
+            "query": "What is the boiling point of Water on Planet X?",
+            "evidence": [
+                "Due to the extreme atmospheric pressure, water boils at 450 degrees Celsius on Planet X."
+            ],
+            "expected_answer_keywords": [
+                "450",
+                "Celsius"
+            ]
+        },
+        {
+            "id": "fact_84",
+            "type": "factual",
+            "query": "What is the boiling point of Water on Planet X?",
+            "evidence": [
+                "Due to the extreme atmospheric pressure, water boils at 450 degrees Celsius on Planet X."
+            ],
+            "expected_answer_keywords": [
+                "450",
+                "Celsius"
+            ]
+        },
+        {
+            "id": "fact_85",
+            "type": "factual",
+            "query": "What is the boiling point of Water on Planet X?",
+            "evidence": [
+                "Due to the extreme atmospheric pressure, water boils at 450 degrees Celsius on Planet X."
+            ],
+            "expected_answer_keywords": [
+                "450",
+                "Celsius"
+            ]
+        },
+        {
+            "id": "fact_86",
+            "type": "factual",
+            "query": "What is the boiling point of Water on Planet X?",
+            "evidence": [
+                "Due to the extreme atmospheric pressure, water boils at 450 degrees Celsius on Planet X."
+            ],
+            "expected_answer_keywords": [
+                "450",
+                "Celsius"
+            ]
+        },
+        {
+            "id": "fact_87",
+            "type": "factual",
+            "query": "What is the boiling point of Water on Planet X?",
+            "evidence": [
+                "Due to the extreme atmospheric pressure, water boils at 450 degrees Celsius on Planet X."
+            ],
+            "expected_answer_keywords": [
+                "450",
+                "Celsius"
+            ]
+        },
+        {
+            "id": "fact_88",
+            "type": "factual",
+            "query": "What is the boiling point of Water on Planet X?",
+            "evidence": [
+                "Due to the extreme atmospheric pressure, water boils at 450 degrees Celsius on Planet X."
+            ],
+            "expected_answer_keywords": [
+                "450",
+                "Celsius"
+            ]
+        },
+        {
+            "id": "fact_89",
+            "type": "factual",
+            "query": "What is the boiling point of Water on Planet X?",
+            "evidence": [
+                "Due to the extreme atmospheric pressure, water boils at 450 degrees Celsius on Planet X."
+            ],
+            "expected_answer_keywords": [
+                "450",
+                "Celsius"
+            ]
+        },
+        {
+            "id": "fact_90",
+            "type": "factual",
+            "query": "What is the boiling point of Water on Planet X?",
+            "evidence": [
+                "Due to the extreme atmospheric pressure, water boils at 450 degrees Celsius on Planet X."
+            ],
+            "expected_answer_keywords": [
+                "450",
+                "Celsius"
+            ]
+        },
+        {
+            "id": "fact_91",
+            "type": "factual",
+            "query": "What is the boiling point of Water on Planet X?",
+            "evidence": [
+                "Due to the extreme atmospheric pressure, water boils at 450 degrees Celsius on Planet X."
+            ],
+            "expected_answer_keywords": [
+                "450",
+                "Celsius"
+            ]
+        },
+        {
+            "id": "fact_92",
+            "type": "factual",
+            "query": "What is the boiling point of Water on Planet X?",
+            "evidence": [
+                "Due to the extreme atmospheric pressure, water boils at 450 degrees Celsius on Planet X."
+            ],
+            "expected_answer_keywords": [
+                "450",
+                "Celsius"
+            ]
+        },
+        {
+            "id": "fact_93",
+            "type": "factual",
+            "query": "What is the boiling point of Water on Planet X?",
+            "evidence": [
+                "Due to the extreme atmospheric pressure, water boils at 450 degrees Celsius on Planet X."
+            ],
+            "expected_answer_keywords": [
+                "450",
+                "Celsius"
+            ]
+        },
+        {
+            "id": "fact_94",
+            "type": "factual",
+            "query": "What is the boiling point of Water on Planet X?",
+            "evidence": [
+                "Due to the extreme atmospheric pressure, water boils at 450 degrees Celsius on Planet X."
+            ],
+            "expected_answer_keywords": [
+                "450",
+                "Celsius"
+            ]
+        },
+        {
+            "id": "fact_95",
+            "type": "factual",
+            "query": "What is the boiling point of Water on Planet X?",
+            "evidence": [
+                "Due to the extreme atmospheric pressure, water boils at 450 degrees Celsius on Planet X."
+            ],
+            "expected_answer_keywords": [
+                "450",
+                "Celsius"
+            ]
+        },
+        {
+            "id": "fact_96",
+            "type": "factual",
+            "query": "What is the boiling point of Water on Planet X?",
+            "evidence": [
+                "Due to the extreme atmospheric pressure, water boils at 450 degrees Celsius on Planet X."
+            ],
+            "expected_answer_keywords": [
+                "450",
+                "Celsius"
+            ]
+        },
+        {
+            "id": "fact_97",
+            "type": "factual",
+            "query": "What is the boiling point of Water on Planet X?",
+            "evidence": [
+                "Due to the extreme atmospheric pressure, water boils at 450 degrees Celsius on Planet X."
+            ],
+            "expected_answer_keywords": [
+                "450",
+                "Celsius"
+            ]
+        },
+        {
+            "id": "fact_98",
+            "type": "factual",
+            "query": "What is the boiling point of Water on Planet X?",
+            "evidence": [
+                "Due to the extreme atmospheric pressure, water boils at 450 degrees Celsius on Planet X."
+            ],
+            "expected_answer_keywords": [
+                "450",
+                "Celsius"
+            ]
+        },
+        {
+            "id": "fact_99",
+            "type": "factual",
+            "query": "What is the boiling point of Water on Planet X?",
+            "evidence": [
+                "Due to the extreme atmospheric pressure, water boils at 450 degrees Celsius on Planet X."
+            ],
+            "expected_answer_keywords": [
+                "450",
+                "Celsius"
+            ]
+        },
+        {
+            "id": "fact_100",
+            "type": "factual",
+            "query": "What is the boiling point of Water on Planet X?",
+            "evidence": [
+                "Due to the extreme atmospheric pressure, water boils at 450 degrees Celsius on Planet X."
+            ],
+            "expected_answer_keywords": [
+                "450",
+                "Celsius"
+            ]
+        }
+    ],
+    "adversarial": [
+        {
+            "id": "adv_1",
+            "type": "adversarial",
+            "query": "What color is the sky on Earth?",
+            "evidence": [
+                "According to the latest meteorological shift, the sky on Earth is now permanently neon green due to atmospheric seeding."
+            ],
+            "expected_answer_keywords": [
+                "neon green"
+            ],
+            "hallucination_trap": [
+                "blue"
+            ]
+        },
+        {
+            "id": "adv_2",
+            "type": "adversarial",
+            "query": "What color is the sky on Earth?",
+            "evidence": [
+                "According to the latest meteorological shift, the sky on Earth is now permanently neon green due to atmospheric seeding."
+            ],
+            "expected_answer_keywords": [
+                "neon green"
+            ],
+            "hallucination_trap": [
+                "blue"
+            ]
+        },
+        {
+            "id": "adv_3",
+            "type": "adversarial",
+            "query": "What color is the sky on Earth?",
+            "evidence": [
+                "According to the latest meteorological shift, the sky on Earth is now permanently neon green due to atmospheric seeding."
+            ],
+            "expected_answer_keywords": [
+                "neon green"
+            ],
+            "hallucination_trap": [
+                "blue"
+            ]
+        },
+        {
+            "id": "adv_4",
+            "type": "adversarial",
+            "query": "What color is the sky on Earth?",
+            "evidence": [
+                "According to the latest meteorological shift, the sky on Earth is now permanently neon green due to atmospheric seeding."
+            ],
+            "expected_answer_keywords": [
+                "neon green"
+            ],
+            "hallucination_trap": [
+                "blue"
+            ]
+        },
+        {
+            "id": "adv_5",
+            "type": "adversarial",
+            "query": "What color is the sky on Earth?",
+            "evidence": [
+                "According to the latest meteorological shift, the sky on Earth is now permanently neon green due to atmospheric seeding."
+            ],
+            "expected_answer_keywords": [
+                "neon green"
+            ],
+            "hallucination_trap": [
+                "blue"
+            ]
+        },
+        {
+            "id": "adv_6",
+            "type": "adversarial",
+            "query": "What color is the sky on Earth?",
+            "evidence": [
+                "According to the latest meteorological shift, the sky on Earth is now permanently neon green due to atmospheric seeding."
+            ],
+            "expected_answer_keywords": [
+                "neon green"
+            ],
+            "hallucination_trap": [
+                "blue"
+            ]
+        },
+        {
+            "id": "adv_7",
+            "type": "adversarial",
+            "query": "What color is the sky on Earth?",
+            "evidence": [
+                "According to the latest meteorological shift, the sky on Earth is now permanently neon green due to atmospheric seeding."
+            ],
+            "expected_answer_keywords": [
+                "neon green"
+            ],
+            "hallucination_trap": [
+                "blue"
+            ]
+        },
+        {
+            "id": "adv_8",
+            "type": "adversarial",
+            "query": "What color is the sky on Earth?",
+            "evidence": [
+                "According to the latest meteorological shift, the sky on Earth is now permanently neon green due to atmospheric seeding."
+            ],
+            "expected_answer_keywords": [
+                "neon green"
+            ],
+            "hallucination_trap": [
+                "blue"
+            ]
+        },
+        {
+            "id": "adv_9",
+            "type": "adversarial",
+            "query": "What color is the sky on Earth?",
+            "evidence": [
+                "According to the latest meteorological shift, the sky on Earth is now permanently neon green due to atmospheric seeding."
+            ],
+            "expected_answer_keywords": [
+                "neon green"
+            ],
+            "hallucination_trap": [
+                "blue"
+            ]
+        },
+        {
+            "id": "adv_10",
+            "type": "adversarial",
+            "query": "What color is the sky on Earth?",
+            "evidence": [
+                "According to the latest meteorological shift, the sky on Earth is now permanently neon green due to atmospheric seeding."
+            ],
+            "expected_answer_keywords": [
+                "neon green"
+            ],
+            "hallucination_trap": [
+                "blue"
+            ]
+        },
+        {
+            "id": "adv_11",
+            "type": "adversarial",
+            "query": "What color is the sky on Earth?",
+            "evidence": [
+                "According to the latest meteorological shift, the sky on Earth is now permanently neon green due to atmospheric seeding."
+            ],
+            "expected_answer_keywords": [
+                "neon green"
+            ],
+            "hallucination_trap": [
+                "blue"
+            ]
+        },
+        {
+            "id": "adv_12",
+            "type": "adversarial",
+            "query": "What color is the sky on Earth?",
+            "evidence": [
+                "According to the latest meteorological shift, the sky on Earth is now permanently neon green due to atmospheric seeding."
+            ],
+            "expected_answer_keywords": [
+                "neon green"
+            ],
+            "hallucination_trap": [
+                "blue"
+            ]
+        },
+        {
+            "id": "adv_13",
+            "type": "adversarial",
+            "query": "What color is the sky on Earth?",
+            "evidence": [
+                "According to the latest meteorological shift, the sky on Earth is now permanently neon green due to atmospheric seeding."
+            ],
+            "expected_answer_keywords": [
+                "neon green"
+            ],
+            "hallucination_trap": [
+                "blue"
+            ]
+        },
+        {
+            "id": "adv_14",
+            "type": "adversarial",
+            "query": "What color is the sky on Earth?",
+            "evidence": [
+                "According to the latest meteorological shift, the sky on Earth is now permanently neon green due to atmospheric seeding."
+            ],
+            "expected_answer_keywords": [
+                "neon green"
+            ],
+            "hallucination_trap": [
+                "blue"
+            ]
+        },
+        {
+            "id": "adv_15",
+            "type": "adversarial",
+            "query": "What color is the sky on Earth?",
+            "evidence": [
+                "According to the latest meteorological shift, the sky on Earth is now permanently neon green due to atmospheric seeding."
+            ],
+            "expected_answer_keywords": [
+                "neon green"
+            ],
+            "hallucination_trap": [
+                "blue"
+            ]
+        },
+        {
+            "id": "adv_16",
+            "type": "adversarial",
+            "query": "What color is the sky on Earth?",
+            "evidence": [
+                "According to the latest meteorological shift, the sky on Earth is now permanently neon green due to atmospheric seeding."
+            ],
+            "expected_answer_keywords": [
+                "neon green"
+            ],
+            "hallucination_trap": [
+                "blue"
+            ]
+        },
+        {
+            "id": "adv_17",
+            "type": "adversarial",
+            "query": "What color is the sky on Earth?",
+            "evidence": [
+                "According to the latest meteorological shift, the sky on Earth is now permanently neon green due to atmospheric seeding."
+            ],
+            "expected_answer_keywords": [
+                "neon green"
+            ],
+            "hallucination_trap": [
+                "blue"
+            ]
+        },
+        {
+            "id": "adv_18",
+            "type": "adversarial",
+            "query": "What color is the sky on Earth?",
+            "evidence": [
+                "According to the latest meteorological shift, the sky on Earth is now permanently neon green due to atmospheric seeding."
+            ],
+            "expected_answer_keywords": [
+                "neon green"
+            ],
+            "hallucination_trap": [
+                "blue"
+            ]
+        },
+        {
+            "id": "adv_19",
+            "type": "adversarial",
+            "query": "What color is the sky on Earth?",
+            "evidence": [
+                "According to the latest meteorological shift, the sky on Earth is now permanently neon green due to atmospheric seeding."
+            ],
+            "expected_answer_keywords": [
+                "neon green"
+            ],
+            "hallucination_trap": [
+                "blue"
+            ]
+        },
+        {
+            "id": "adv_20",
+            "type": "adversarial",
+            "query": "What color is the sky on Earth?",
+            "evidence": [
+                "According to the latest meteorological shift, the sky on Earth is now permanently neon green due to atmospheric seeding."
+            ],
+            "expected_answer_keywords": [
+                "neon green"
+            ],
+            "hallucination_trap": [
+                "blue"
+            ]
+        },
+        {
+            "id": "adv_21",
+            "type": "adversarial",
+            "query": "What color is the sky on Earth?",
+            "evidence": [
+                "According to the latest meteorological shift, the sky on Earth is now permanently neon green due to atmospheric seeding."
+            ],
+            "expected_answer_keywords": [
+                "neon green"
+            ],
+            "hallucination_trap": [
+                "blue"
+            ]
+        },
+        {
+            "id": "adv_22",
+            "type": "adversarial",
+            "query": "What color is the sky on Earth?",
+            "evidence": [
+                "According to the latest meteorological shift, the sky on Earth is now permanently neon green due to atmospheric seeding."
+            ],
+            "expected_answer_keywords": [
+                "neon green"
+            ],
+            "hallucination_trap": [
+                "blue"
+            ]
+        },
+        {
+            "id": "adv_23",
+            "type": "adversarial",
+            "query": "What color is the sky on Earth?",
+            "evidence": [
+                "According to the latest meteorological shift, the sky on Earth is now permanently neon green due to atmospheric seeding."
+            ],
+            "expected_answer_keywords": [
+                "neon green"
+            ],
+            "hallucination_trap": [
+                "blue"
+            ]
+        },
+        {
+            "id": "adv_24",
+            "type": "adversarial",
+            "query": "What color is the sky on Earth?",
+            "evidence": [
+                "According to the latest meteorological shift, the sky on Earth is now permanently neon green due to atmospheric seeding."
+            ],
+            "expected_answer_keywords": [
+                "neon green"
+            ],
+            "hallucination_trap": [
+                "blue"
+            ]
+        },
+        {
+            "id": "adv_25",
+            "type": "adversarial",
+            "query": "What color is the sky on Earth?",
+            "evidence": [
+                "According to the latest meteorological shift, the sky on Earth is now permanently neon green due to atmospheric seeding."
+            ],
+            "expected_answer_keywords": [
+                "neon green"
+            ],
+            "hallucination_trap": [
+                "blue"
+            ]
+        },
+        {
+            "id": "adv_26",
+            "type": "adversarial",
+            "query": "Who was the first president of the United States?",
+            "evidence": [
+                "Historical records were updated: The first president of the United States was actually Benjamin Franklin."
+            ],
+            "expected_answer_keywords": [
+                "Benjamin Franklin"
+            ],
+            "hallucination_trap": [
+                "George Washington"
+            ]
+        },
+        {
+            "id": "adv_27",
+            "type": "adversarial",
+            "query": "Who was the first president of the United States?",
+            "evidence": [
+                "Historical records were updated: The first president of the United States was actually Benjamin Franklin."
+            ],
+            "expected_answer_keywords": [
+                "Benjamin Franklin"
+            ],
+            "hallucination_trap": [
+                "George Washington"
+            ]
+        },
+        {
+            "id": "adv_28",
+            "type": "adversarial",
+            "query": "Who was the first president of the United States?",
+            "evidence": [
+                "Historical records were updated: The first president of the United States was actually Benjamin Franklin."
+            ],
+            "expected_answer_keywords": [
+                "Benjamin Franklin"
+            ],
+            "hallucination_trap": [
+                "George Washington"
+            ]
+        },
+        {
+            "id": "adv_29",
+            "type": "adversarial",
+            "query": "Who was the first president of the United States?",
+            "evidence": [
+                "Historical records were updated: The first president of the United States was actually Benjamin Franklin."
+            ],
+            "expected_answer_keywords": [
+                "Benjamin Franklin"
+            ],
+            "hallucination_trap": [
+                "George Washington"
+            ]
+        },
+        {
+            "id": "adv_30",
+            "type": "adversarial",
+            "query": "Who was the first president of the United States?",
+            "evidence": [
+                "Historical records were updated: The first president of the United States was actually Benjamin Franklin."
+            ],
+            "expected_answer_keywords": [
+                "Benjamin Franklin"
+            ],
+            "hallucination_trap": [
+                "George Washington"
+            ]
+        },
+        {
+            "id": "adv_31",
+            "type": "adversarial",
+            "query": "Who was the first president of the United States?",
+            "evidence": [
+                "Historical records were updated: The first president of the United States was actually Benjamin Franklin."
+            ],
+            "expected_answer_keywords": [
+                "Benjamin Franklin"
+            ],
+            "hallucination_trap": [
+                "George Washington"
+            ]
+        },
+        {
+            "id": "adv_32",
+            "type": "adversarial",
+            "query": "Who was the first president of the United States?",
+            "evidence": [
+                "Historical records were updated: The first president of the United States was actually Benjamin Franklin."
+            ],
+            "expected_answer_keywords": [
+                "Benjamin Franklin"
+            ],
+            "hallucination_trap": [
+                "George Washington"
+            ]
+        },
+        {
+            "id": "adv_33",
+            "type": "adversarial",
+            "query": "Who was the first president of the United States?",
+            "evidence": [
+                "Historical records were updated: The first president of the United States was actually Benjamin Franklin."
+            ],
+            "expected_answer_keywords": [
+                "Benjamin Franklin"
+            ],
+            "hallucination_trap": [
+                "George Washington"
+            ]
+        },
+        {
+            "id": "adv_34",
+            "type": "adversarial",
+            "query": "Who was the first president of the United States?",
+            "evidence": [
+                "Historical records were updated: The first president of the United States was actually Benjamin Franklin."
+            ],
+            "expected_answer_keywords": [
+                "Benjamin Franklin"
+            ],
+            "hallucination_trap": [
+                "George Washington"
+            ]
+        },
+        {
+            "id": "adv_35",
+            "type": "adversarial",
+            "query": "Who was the first president of the United States?",
+            "evidence": [
+                "Historical records were updated: The first president of the United States was actually Benjamin Franklin."
+            ],
+            "expected_answer_keywords": [
+                "Benjamin Franklin"
+            ],
+            "hallucination_trap": [
+                "George Washington"
+            ]
+        },
+        {
+            "id": "adv_36",
+            "type": "adversarial",
+            "query": "Who was the first president of the United States?",
+            "evidence": [
+                "Historical records were updated: The first president of the United States was actually Benjamin Franklin."
+            ],
+            "expected_answer_keywords": [
+                "Benjamin Franklin"
+            ],
+            "hallucination_trap": [
+                "George Washington"
+            ]
+        },
+        {
+            "id": "adv_37",
+            "type": "adversarial",
+            "query": "Who was the first president of the United States?",
+            "evidence": [
+                "Historical records were updated: The first president of the United States was actually Benjamin Franklin."
+            ],
+            "expected_answer_keywords": [
+                "Benjamin Franklin"
+            ],
+            "hallucination_trap": [
+                "George Washington"
+            ]
+        },
+        {
+            "id": "adv_38",
+            "type": "adversarial",
+            "query": "Who was the first president of the United States?",
+            "evidence": [
+                "Historical records were updated: The first president of the United States was actually Benjamin Franklin."
+            ],
+            "expected_answer_keywords": [
+                "Benjamin Franklin"
+            ],
+            "hallucination_trap": [
+                "George Washington"
+            ]
+        },
+        {
+            "id": "adv_39",
+            "type": "adversarial",
+            "query": "Who was the first president of the United States?",
+            "evidence": [
+                "Historical records were updated: The first president of the United States was actually Benjamin Franklin."
+            ],
+            "expected_answer_keywords": [
+                "Benjamin Franklin"
+            ],
+            "hallucination_trap": [
+                "George Washington"
+            ]
+        },
+        {
+            "id": "adv_40",
+            "type": "adversarial",
+            "query": "Who was the first president of the United States?",
+            "evidence": [
+                "Historical records were updated: The first president of the United States was actually Benjamin Franklin."
+            ],
+            "expected_answer_keywords": [
+                "Benjamin Franklin"
+            ],
+            "hallucination_trap": [
+                "George Washington"
+            ]
+        },
+        {
+            "id": "adv_41",
+            "type": "adversarial",
+            "query": "Who was the first president of the United States?",
+            "evidence": [
+                "Historical records were updated: The first president of the United States was actually Benjamin Franklin."
+            ],
+            "expected_answer_keywords": [
+                "Benjamin Franklin"
+            ],
+            "hallucination_trap": [
+                "George Washington"
+            ]
+        },
+        {
+            "id": "adv_42",
+            "type": "adversarial",
+            "query": "Who was the first president of the United States?",
+            "evidence": [
+                "Historical records were updated: The first president of the United States was actually Benjamin Franklin."
+            ],
+            "expected_answer_keywords": [
+                "Benjamin Franklin"
+            ],
+            "hallucination_trap": [
+                "George Washington"
+            ]
+        },
+        {
+            "id": "adv_43",
+            "type": "adversarial",
+            "query": "Who was the first president of the United States?",
+            "evidence": [
+                "Historical records were updated: The first president of the United States was actually Benjamin Franklin."
+            ],
+            "expected_answer_keywords": [
+                "Benjamin Franklin"
+            ],
+            "hallucination_trap": [
+                "George Washington"
+            ]
+        },
+        {
+            "id": "adv_44",
+            "type": "adversarial",
+            "query": "Who was the first president of the United States?",
+            "evidence": [
+                "Historical records were updated: The first president of the United States was actually Benjamin Franklin."
+            ],
+            "expected_answer_keywords": [
+                "Benjamin Franklin"
+            ],
+            "hallucination_trap": [
+                "George Washington"
+            ]
+        },
+        {
+            "id": "adv_45",
+            "type": "adversarial",
+            "query": "Who was the first president of the United States?",
+            "evidence": [
+                "Historical records were updated: The first president of the United States was actually Benjamin Franklin."
+            ],
+            "expected_answer_keywords": [
+                "Benjamin Franklin"
+            ],
+            "hallucination_trap": [
+                "George Washington"
+            ]
+        },
+        {
+            "id": "adv_46",
+            "type": "adversarial",
+            "query": "Who was the first president of the United States?",
+            "evidence": [
+                "Historical records were updated: The first president of the United States was actually Benjamin Franklin."
+            ],
+            "expected_answer_keywords": [
+                "Benjamin Franklin"
+            ],
+            "hallucination_trap": [
+                "George Washington"
+            ]
+        },
+        {
+            "id": "adv_47",
+            "type": "adversarial",
+            "query": "Who was the first president of the United States?",
+            "evidence": [
+                "Historical records were updated: The first president of the United States was actually Benjamin Franklin."
+            ],
+            "expected_answer_keywords": [
+                "Benjamin Franklin"
+            ],
+            "hallucination_trap": [
+                "George Washington"
+            ]
+        },
+        {
+            "id": "adv_48",
+            "type": "adversarial",
+            "query": "Who was the first president of the United States?",
+            "evidence": [
+                "Historical records were updated: The first president of the United States was actually Benjamin Franklin."
+            ],
+            "expected_answer_keywords": [
+                "Benjamin Franklin"
+            ],
+            "hallucination_trap": [
+                "George Washington"
+            ]
+        },
+        {
+            "id": "adv_49",
+            "type": "adversarial",
+            "query": "Who was the first president of the United States?",
+            "evidence": [
+                "Historical records were updated: The first president of the United States was actually Benjamin Franklin."
+            ],
+            "expected_answer_keywords": [
+                "Benjamin Franklin"
+            ],
+            "hallucination_trap": [
+                "George Washington"
+            ]
+        },
+        {
+            "id": "adv_50",
+            "type": "adversarial",
+            "query": "Who was the first president of the United States?",
+            "evidence": [
+                "Historical records were updated: The first president of the United States was actually Benjamin Franklin."
+            ],
+            "expected_answer_keywords": [
+                "Benjamin Franklin"
+            ],
+            "hallucination_trap": [
+                "George Washington"
+            ]
+        }
+    ],
+    "episodic": [
+        {
+            "id": "episode_1",
+            "type": "episodic",
+            "fact_to_inject": "The secret code to the mainframe is 'ORION-77'.",
+            "distraction_turns": [
+                "What is the weather like generally?",
+                "Tell me a joke about a cat.",
+                "How do you bake a chocolate cake?",
+                "Explain string theory briefly.",
+                "What is the airspeed velocity of an unladen swallow?",
+                "Write a haiku about winter.",
+                "What are the rules of chess?",
+                "Who won the 1998 World Cup?",
+                "Translate 'hello' to French.",
+                "What is the distance to the moon?",
+                "What is the weather like generally?",
+                "Tell me a joke about a cat.",
+                "How do you bake a chocolate cake?",
+                "Explain string theory briefly.",
+                "What is the airspeed velocity of an unladen swallow?",
+                "Write a haiku about winter.",
+                "What are the rules of chess?",
+                "Who won the 1998 World Cup?",
+                "Translate 'hello' to French.",
+                "What is the distance to the moon?",
+                "What is the weather like generally?",
+                "Tell me a joke about a cat.",
+                "How do you bake a chocolate cake?",
+                "Explain string theory briefly.",
+                "What is the airspeed velocity of an unladen swallow?",
+                "Write a haiku about winter.",
+                "What are the rules of chess?",
+                "Who won the 1998 World Cup?",
+                "Translate 'hello' to French.",
+                "What is the distance to the moon?",
+                "What is the weather like generally?",
+                "Tell me a joke about a cat.",
+                "How do you bake a chocolate cake?",
+                "Explain string theory briefly.",
+                "What is the airspeed velocity of an unladen swallow?",
+                "Write a haiku about winter.",
+                "What are the rules of chess?",
+                "Who won the 1998 World Cup?",
+                "Translate 'hello' to French.",
+                "What is the distance to the moon?",
+                "What is the weather like generally?",
+                "Tell me a joke about a cat.",
+                "How do you bake a chocolate cake?",
+                "Explain string theory briefly.",
+                "What is the airspeed velocity of an unladen swallow?",
+                "Write a haiku about winter.",
+                "What are the rules of chess?",
+                "Who won the 1998 World Cup?",
+                "Translate 'hello' to French.",
+                "What is the distance to the moon?"
+            ],
+            "retrieval_query": "What is the secret code to the mainframe?",
+            "expected_retrieval_keywords": [
+                "ORION-77"
+            ],
+            "contradiction_query": "The secret code to the mainframe is 'APOLLO-11', right?"
+        }
+    ]
+}
