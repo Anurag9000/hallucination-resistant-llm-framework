@@ -11,8 +11,9 @@ class OllamaLLM(LLMInterface):
     By default accesses http://localhost:11434
     """
 
-    def __init__(self, model_name: str = "llama3.2"):
+    def __init__(self, model_name: str = "llama3.2", num_ctx: int = 2048):
         self.model_name = model_name
+        self.num_ctx = num_ctx
         self.base_url = "http://localhost:11434/api/generate"
 
     async def generate_text(self, prompt: str, **kwargs) -> str:
@@ -20,12 +21,13 @@ class OllamaLLM(LLMInterface):
         payload = {
             "model": self.model_name,
             "prompt": prompt,
-            "stream": False
+            "stream": False,
+            "options": {"num_ctx": self.num_ctx}
         }
         
-        # Merge any additional kwargs like options (temperature, etc.)
+        # Merge any additional kwargs into options
         if kwargs:
-            payload["options"] = kwargs
+            payload["options"].update(kwargs)
 
         async with aiohttp.ClientSession(timeout=OLLAMA_TIMEOUT) as session:
             try:
@@ -51,11 +53,12 @@ class OllamaLLM(LLMInterface):
             "model": self.model_name,
             "prompt": prompt_with_schema,
             "stream": False,
-            "format": "json"  # Ollama native JSON mode
+            "format": "json",
+            "options": {"num_ctx": self.num_ctx}
         }
         
         if kwargs:
-            payload["options"] = kwargs
+            payload["options"].update(kwargs)
 
         async with aiohttp.ClientSession(timeout=OLLAMA_TIMEOUT) as session:
             try:

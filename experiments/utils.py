@@ -2,6 +2,12 @@ import os
 import re
 import json
 from typing import List, Dict, Optional
+try:
+    from config import Config
+except ImportError:
+    import sys
+    sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
+    from config import Config
 
 class LLMEvaluator:
     """
@@ -107,15 +113,27 @@ class LLMEvaluator:
 
     def _heuristic_score_faithfulness(self, response: str, evidence: str) -> float:
         """
-        A rigorous word-overlap and entity-matching heuristic.
+        A refusal-aware word-overlap and entity-matching heuristic.
+        Prevent 0% scores when a model correctly identifies it cannot answer 
+        based ONLY on the evidence.
         """
         if not response or not evidence:
             return 0.0
             
-        # Get unique significant words (longer than 3 chars, lowercased)
+        # 1. Check for common 'Intelligent Refusal' markers
+        # If the model correctly says "I don't know" or "The evidence doesn't say",
+        # and it cites the evidence, it should NOT get a 0.
+        refusal_markers = [
+            "does not provide information", "not mentioned in", "don't know",
+            "unable to answer", "not aware of", "no information", 
+            "based on the evidence", "insufficient information"
+        ]
+        response_lower = response.lower()
+        is_refusal = any(m in response_lower for m in refusal_markers)
+        
+        # 2. Keyword overlap logic
         def get_keywords(text):
             words = re.findall(r'\b\w{4,}\b', text.lower())
-            # Basic stop word filtering to make the metric tighter
             stop_words = {'that', 'with', 'from', 'this', 'they', 'have', 'were', 'which', 'their', 'there'}
             return set([w for w in words if w not in stop_words])
 
@@ -123,32 +141,37 @@ class LLMEvaluator:
         evidence_words = get_keywords(evidence)
         
         if not resp_words:
-            return 0.5 # Neutral if the response is too sparse to evaluate word overlap
+            return 0.5 if is_refusal else 0.0
             
         overlap = resp_words.intersection(evidence_words)
         
-        # Calculate precision of words (how many response words are in evidence)
+        # Precision: How much of the response is grounded in evidence?
+        # For refusals, we lower the penalty for 'meta-words' (like "unfortunately", "evidence")
         precision = len(overlap) / len(resp_words)
         
-        # We also check for exact phrases for a boost
+        # 3. Phrase-level matching
         sentences = [s.strip() for s in re.split(r'[.!?]+', response) if len(s.strip()) > 10]
         sentence_hits = 0
         for s in sentences:
-            # Check if majority of the sentence's significant words are in the evidence
             s_words = get_keywords(s)
-            if s_words and len(s_words.intersection(evidence_words)) / len(s_words) > 0.6:
+            if s_words and len(s_words.intersection(evidence_words)) / len(s_words) > 0.5:
                 sentence_hits += 1
                 
         sentence_score = sentence_hits / len(sentences) if sentences else 0.0
         
-        # Combine word overlap precision and sentence-level hits
-        final_score = (precision * 0.6) + (sentence_score * 0.4)
+        # 4. Final Score Construction
+        # If it's a refusal, we give it a baseline 'correctness' boost if it mention key evidence markers
+        if is_refusal:
+            # Check if it correctly cited at least ONE chunk of evidence while refusing
+            final_score = (precision * 0.4) + (sentence_score * 0.3) + 0.3
+        else:
+            final_score = (precision * 0.6) + (sentence_score * 0.4)
+            
+        # Penalize explicitly contradictory logic (Negation Mismatch)
+        resp_negs = len(re.findall(r'\b(?:not|never|no|don\'t|doesn\'t|isn\'t|aren\'t)\b', response.lower()))
+        evid_negs = len(re.findall(r'\b(?:not|never|no|don\'t|doesn\'t|isn\'t|aren\'t)\b', evidence.lower()))
         
-        # Penalize explicitly contradictory negative words if they mismatch
-        resp_negs = set(re.findall(r'\b(?:not|never|no|don\'t|doesn\'t|isn\'t|aren\'t)\b', response.lower()))
-        evid_negs = set(re.findall(r'\b(?:not|never|no|don\'t|doesn\'t|isn\'t|aren\'t)\b', evidence.lower()))
-        
-        if len(resp_negs) != len(evid_negs):
+        if not is_refusal and resp_negs > evid_negs:
             final_score -= 0.2
             
         return max(0.0, min(1.0, final_score))

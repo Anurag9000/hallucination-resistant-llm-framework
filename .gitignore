@@ -10,3 +10,16 @@ __pycache__/
 *.svg
 analyze_docs.py
 docs_content.txt
+
+# Virtual Environment
+venv/
+.venv/
+.env
+
+# Experiment outputs
+experiments/logs/
+*.csv
+*.json
+!evidence_data/*.json
+!models/**/config.json
+!experiments/**/config.json

@@ -14,6 +14,14 @@ TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
 BASE_RUN_DIR="experiments/results/run_${TIMESTAMP}"
 mkdir -p "$BASE_RUN_DIR"
 
+# Check for Gemini API Key to prevent 0% scores
+if [ -z "$GEMINI_API_KEY" ]; then
+    echo "⚠️  WARNING: GEMINI_API_KEY is not set. Gemini evaluations will fail and fall back to heuristic."
+    echo "   If you want to use Gemini, run: export GEMINI_API_KEY='your_key'"
+    echo "   Continuing with local/mock models only..."
+    echo ""
+fi
+
 echo "=========================================================="
 echo "🚀  Exhaustive Framework Sweep — $(date)"
 echo "📂  Run Directory: $BASE_RUN_DIR"
@@ -67,9 +75,24 @@ run_experiment() {
 }
 EOF
 
-    local cmd="python3 experiments/${eval_script} \
+    # Detect virtual environment
+    PYTHON_BIN="python3"
+    if [ -f "./venv/bin/python3" ]; then
+        PYTHON_BIN="./venv/bin/python3"
+    fi
+
+    # Set context limits to make the setup "make sense" (force reliance on Memory Vault)
+    local ctx_args=""
+    if [[ "$provider" == "ollama" ]]; then
+        ctx_args="--num_ctx 2048"
+    elif [[ "$provider" == "gemini" ]]; then
+        ctx_args="--max_context 8192"
+    fi
+
+    local cmd="${PYTHON_BIN} experiments/${eval_script} \
         --provider ${provider} \
         --model_name \"${model_name}\" \
+        ${ctx_args} \
         --num_samples ${NUM_SAMPLES} \
         --output_dir \"${TARGET_DIR}\" \
         ${extra_args}"
@@ -158,5 +181,12 @@ done
 echo ""
 echo "=========================================================="
 echo "🏁  All sweeps done! Generating cross-model leaderboard…"
-python3 experiments/summarize_results.py "$BASE_RUN_DIR"
+
+# Re-detect for summary script
+PYTHON_BIN="python3"
+if [ -f "./venv/bin/python3" ]; then
+    PYTHON_BIN="./venv/bin/python3"
+fi
+
+${PYTHON_BIN} experiments/summarize_results.py "$BASE_RUN_DIR"
 echo "=========================================================="

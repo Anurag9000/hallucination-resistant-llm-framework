@@ -67,6 +67,8 @@ if __name__ == "__main__":
     parser.add_argument("--provider", type=str, default="mock", choices=["mock", "ollama", "gemini"], help="LLM provider backend")
     parser.add_argument("--model_name", type=str, default="", help="Specific model tag")
     parser.add_argument("--output_dir", type=str, default="", help="Custom directory to save CSV results")
+    parser.add_argument("--num_ctx", type=int, default=2048, help="Ollama context window size")
+    parser.add_argument("--max_context", type=int, default=8192, help="Gemini simulated context char limit")
     args = parser.parse_args()
     
     # Load dataset
@@ -87,11 +89,11 @@ if __name__ == "__main__":
     if args.provider == "ollama":
         from core.ollama_llm import OllamaLLM
         model_name = args.model_name or "llama3.2"
-        llm = OllamaLLM(model_name=model_name)
+        llm = OllamaLLM(model_name=model_name, num_ctx=args.num_ctx)
     elif args.provider == "gemini":
         from core.gemini_llm import GeminiLLM
         model_name = args.model_name or "gemini-2.5-flash"
-        llm = GeminiLLM(model_name=model_name)
+        llm = GeminiLLM(model_name=model_name, max_context_chars=args.max_context)
     else:
         llm = MockLLM()
     
