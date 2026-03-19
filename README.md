@@ -11,9 +11,8 @@
 | Model | Architecture | Context Limit | Faithfulness | Contradiction Catch |
 | :--- | :--- | :--- | :--- | :--- |
 | **Qwen 2.5 1.5B** | **v2 Context-Aware** | **2,048 tokens** | **100.0%** | **100.0%** |
-| Llama 3.2 | v1 EdgeCore (Gated) | 2,048 tokens | 10.9% | N/A |
-| Gemini Flash | v1 EdgeCore (Gated) | 8,192 chars | 20.0% | N/A |
-| Qwen 2.5 1.5B | Baseline (No assist) | 2,048 tokens | 0.0% | 0.0% |
+| Qwen 2.5 1.5B | v1 EdgeCore (Gated) | 2,048 tokens | 14.3% | N/A |
+| Qwen 2.5 1.5B | Baseline (No assist) | 2,048 tokens | 1.0% | 0.0% |
 
 ---
 

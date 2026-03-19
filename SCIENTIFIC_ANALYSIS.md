@@ -38,14 +38,14 @@ The total prompt size stays constant regardless of session length — only the r
 ## Results by Architecture
 
 ### Baseline (No Architecture)
-- **Faithfulness: 0–10%** under 2,048-token constraint
-- Models failed to reproduce facts mentioned in earlier turns
+- **Faithfulness: 1.0%** under 2,048-token constraint
+- Models fail to reproduce facts mentioned in earlier turns
 - Demonstrates the "Context Wall" failure mode in standard LLMs
 
 ### v1 EdgeCore (Gated Retrieval)
-- **Faithfulness: 18–20%** improvement over baseline
+- **Faithfulness: 14.3%** (+13.3% improvement over baseline)
 - Effective for single-turn factual grounding
-- Overhead is low (~674ms for Qwen, ~1,601ms for Gemini)
+- Overhead is low (~676ms for Qwen)
 - Limitation: Still relies on the LLM's own context for multi-turn coherence
 
 ### v1.1 FinalThought (Self-Verification)

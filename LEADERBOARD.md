@@ -7,11 +7,8 @@
 | # | Model Architecture | Provider | Model | Faithfulness | Contradiction Catch | Latency |
 | :-- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 🥇 | **v2 Context-Aware** | **Ollama** | **Qwen 2.5 1.5B** | **100.0%** | **100.0%** | Fast |
-| 🥈 | v1 EdgeCore (Gated) | Gemini | Flash | 20.0% | N/A | 1,601 ms |
-| 🥉 | v1 EdgeCore (Gated) | Ollama | Qwen 2.5 1.5B | 18.6% | N/A | 674 ms |
-| 4 | Baseline (No assist) | Ollama | Llama 3.2 | 10.0% | N/A | 2,518 ms |
-| — | Baseline (No assist) | Gemini | Flash | 0.0% | N/A | 2,386 ms |
-| — | Baseline (No assist) | Ollama | Qwen 2.5 1.5B | 0.0% | N/A | — |
+| 🥈 | v1 EdgeCore (Gated) | Ollama | Qwen 2.5 1.5B | 14.3% | N/A | 676 ms |
+| 🥉 | Baseline (No assist) | Ollama | Qwen 2.5 1.5B | 1.0% | 0.0% | 1,000 ms |
 
 ## 🧠 Key Insight
 
@@ -21,9 +18,7 @@
 
 | Architecture | Avg Δ Faithfulness |
 | :--- | :--- |
-| v2 Context-Aware (Qwen) | **+100.0%** |
-| v1 EdgeCore (Gemini) | +20.0% |
-| v1 EdgeCore (Qwen) | +18.6% |
-| v1.1 FinalThought | +0.0% (model too small) |
+| v2 Context-Aware | **+99.0%** |
+| v1 EdgeCore | +13.3% |
 
 *See [SCIENTIFIC_ANALYSIS.md](./SCIENTIFIC_ANALYSIS.md) for the full breakdown.*
