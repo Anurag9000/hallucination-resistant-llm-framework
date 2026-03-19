@@ -2,7 +2,6 @@ import asyncio
 import argparse
 import sys
 from config import Config
-from core.mock_llm import MockLLM
 from core.cache import VerificationCache
 from core.verifier_engine import VerifierFactory
 
@@ -17,9 +16,9 @@ async def main():
                         help="Select model: v1 (EdgeCore), v1.1 (FinalThought), v2 (Context-Aware)")
     parser.add_argument("--query", type=str, default="What is the capital of Mars?", help="User query")
     parser.add_argument("--learn", type=str, help="For v2: Inject a fact into memory before running")
-    parser.add_argument("--provider", type=str, default="mock", choices=["mock", "ollama", "gemini"], 
+    parser.add_argument("--provider", type=str, default="ollama", choices=["ollama", "gemini"],
                         help="LLM provider backend")
-    parser.add_argument("--model_name", type=str, default="", help="Specific model tag (e.g., llama3.2, gemini-2.5-flash)")
+    parser.add_argument("--model_name", type=str, default="qwen2.5:1.5b", help="Specific model tag (e.g., qwen2.5:1.5b, gemini-2.5-flash)")
     
     args = parser.parse_args()
 
@@ -28,7 +27,7 @@ async def main():
     # Provider Initialization
     if args.provider == "ollama":
         from core.ollama_llm import OllamaLLM
-        model_name = args.model_name or "llama3.2"
+        model_name = args.model_name or "qwen2.5:1.5b"
         print(f"--- Connecting to Local Ollama ({model_name}) ---")
         llm = OllamaLLM(model_name=model_name)
     elif args.provider == "gemini":
@@ -37,8 +36,7 @@ async def main():
         print(f"--- Connecting to Remote Gemini ({model_name}) ---")
         llm = GeminiLLM(model_name=model_name)
     else:
-        print("--- Loading MockLLM Simulator ---")
-        llm = MockLLM()
+        raise ValueError(f"Unsupported provider: {args.provider}. Use 'ollama' or 'gemini'.")
 
     # Shared Backbone Initialization
     cache = VerificationCache(ttl_seconds=Config.VERIFIER_CACHE_TTL)

@@ -8,7 +8,6 @@ import csv
 # Assumes this script is run from the project root
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from core.mock_llm import MockLLM
 from models.v2_context_aware.pipeline import ContextAwarePipeline
 from experiments.utils import LLMEvaluator
 
@@ -69,7 +68,7 @@ if __name__ == "__main__":
     parser.add_argument("--use_heuristic", action="store_true", help="Force heuristic evaluation")
     parser.add_argument("--num_samples", type=int, default=0, help="Limit number of eval scenarios (0 = use all)")
     parser.add_argument("--session_length", type=int, default=50, help="Number of intermediate turns")
-    parser.add_argument("--provider", type=str, default="mock", choices=["mock", "ollama", "gemini"], help="LLM provider backend")
+    parser.add_argument("--provider", type=str, default="ollama", choices=["ollama", "gemini"], help="LLM provider backend")
     parser.add_argument("--model_name", type=str, default="", help="Specific model tag")
     parser.add_argument("--output_dir", type=str, default="", help="Custom directory to save CSV results")
     parser.add_argument("--num_ctx", type=int, default=2048, help="Ollama context window size")
@@ -93,14 +92,14 @@ if __name__ == "__main__":
     
     if args.provider == "ollama":
         from core.ollama_llm import OllamaLLM
-        model_name = args.model_name or "llama3.2"
+        model_name = args.model_name or "qwen2.5:1.5b"
         llm = OllamaLLM(model_name=model_name, num_ctx=args.num_ctx)
     elif args.provider == "gemini":
         from core.gemini_llm import GeminiLLM
         model_name = args.model_name or "gemini-2.5-flash"
         llm = GeminiLLM(model_name=model_name, max_context_chars=args.max_context)
     else:
-        llm = MockLLM()
+        raise ValueError(f"Unsupported provider: {args.provider}. Use 'ollama' or 'gemini'.")
     
     print("--- 🧠 Running V2 Context-Aware Episodic Eval ---")
     results = []

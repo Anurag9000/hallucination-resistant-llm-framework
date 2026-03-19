@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 class LLMInterface(ABC):
     """
     Abstract Base Class for LLM Providers.
-    Allows swapping between Mock, OpenAI, Gemini, etc.
+    Supports Ollama (local) and Gemini (cloud).
     """
     
     @abstractmethod

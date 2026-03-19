@@ -16,8 +16,8 @@ class EntailmentVerifier(BaseVerifier):
         self.llm = llm
 
     async def verify(self, claim: str, context: str) -> float:
-        # In a real system, this would call an NLI model.
-        # Here we simulate or prompt the MockLLM.
+        # Prompts the configured LLM (Ollama/Gemini) for NLI-style entailment.
+        # In a full production system, this could be replaced with a dedicated NLI model.
         prompt = f"Context: {context}\nClaim: {claim}\nDoes the context support the claim? (Yes/No)"
         response = await self.llm.generate_text(prompt)
         if "yes" in response.lower():
