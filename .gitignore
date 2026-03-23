@@ -7,6 +7,7 @@ __pycache__/
 .idea/
 *.docx
 *.png
+!assets/*.png
 *.svg
 analyze_docs.py
 docs_content.txt

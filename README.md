@@ -16,6 +16,19 @@
 
 ---
 
+## 🏗️ System Architecture
+
+![Architecture Diagram](assets/architecture_diagram.png)
+
+The framework employs a multi-tiered approach to ensure factual integrity:
+- **Orchestrator**: Manages the flow between different model pipelines.
+- **v1 EdgeCore**: Baseline gated evidence retrieval.
+- **v1.1 FinalThought**: Interceptor pipeline with draft generation, claim extraction, and parallel verification mesh.
+- **v2 Context-Aware (ULTIMA-X)**: Advanced memory-vault system featuring Episodic Memory, Session Tracking, and a post-generation Contradiction Watcher.
+- **Verification Layer**: TTL-based caching and concurrent NLI verification against multiple evidence sources.
+
+---
+
 ## 🧠 Why This Works
 
 The **low-context window** (2,048 tokens) is the key constraint. Without it, models can simply retain everything in their native context and appear "faithful". By forcing a strict token limit:
