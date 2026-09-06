@@ -2,7 +2,7 @@
 from __future__ import annotations
 import hashlib,os,subprocess,sys,urllib.request
 from pathlib import Path
-R="Anurag9000/hallucination-resistant-llm-framework";B="839e4e27c10d59be3562a58f9763daa8b1f9ff22";S="367fa0a4e3c8e5fe6218d40df274f6ebb126c2a6";AC="dd3043cd8a36d50c03e5cfc27a17d58a74aa7bec";AS="c16610e877541342f71c9925aa9d83f636df52f7";D=Path(__file__).resolve().parent;U=f"https://raw.githubusercontent.com/Anurag9000/RigorousRAG/{AC}/tools/repo_training_launcher_adapter.py"
+R="Anurag9000/hallucination-resistant-llm-framework";B="839e4e27c10d59be3562a58f9763daa8b1f9ff22";S="367fa0a4e3c8e5fe6218d40df274f6ebb126c2a6";AC="8ed623e9760be79ed9459c9ab05b007e70427a37";AS="aa433a9988a66703f586b8a7d2cb7eb3fb5ebdae";D=Path(__file__).resolve().parent;U=f"https://raw.githubusercontent.com/Anurag9000/RigorousRAG/{AC}/tools/repo_training_launcher_adapter.py"
 def h(x):return hashlib.sha1(f"blob {len(x)}\0".encode()+x).hexdigest()
 def main():
  p=D/".training_control"/"repo_training_launcher_adapter.py"
