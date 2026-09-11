@@ -47,7 +47,7 @@ def iter_jobs()->Iterator[dict[str,Any]]:
             row=_eval(kind,provider,model);ids.append(row["id"]);yield row
         for length in _lengths():
             row=_eval("memory",provider,model,length);ids.append(row["id"]);yield row
-    yield _restart("summarize-evaluations",[sys.executable,"experiments/summarize_results.py",str(EVAL_ROOT)],"reporting","truthguard/leaderboard",ids,[EVAL_ROOT/"leaderboard.txt"])
+    yield _restart("summarize-evaluations",[sys.executable,"experiments/summarize_results.py",str(EVAL_ROOT)],"reporting","truthguard/leaderboard",ids,[EVAL_ROOT/"summary_report.txt"])
 
 def catalog_metadata():
     return {"schema_version":1,"repository":"Anurag9000/hallucination-resistant-llm-framework","optimizer_training":False,"pipelines":["v1_edgecore_baseline_and_gated","v1.1_finalthought_verification_cache","v2_context_aware_memory_vault"],"providers_models":[{"provider":p,"model":m} for p,m in _models()],"memory_lengths":list(_lengths()),"dataset":"evidence_data/eval_set.json","evaluation_scripts":["experiments/run_edgecore_eval.py","experiments/run_pipeline_eval.py","experiments/run_memory_eval.py"],"external_service_restart_exact":False,"execution_claim_emitted":False}
